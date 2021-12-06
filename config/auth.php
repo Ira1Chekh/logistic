@@ -95,6 +95,12 @@ return [
         ],
     ],
 
+    'manager' => [
+        'first_name' => env('MANAGER_FIRST_NAME', '---'),
+        'last_name' => env('MANAGER_LAST_NAME', '---'),
+        'email' => env('MANAGER_MAIL', 'manager@gmail.com')
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Password Confirmation Timeout

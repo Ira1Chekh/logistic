@@ -14,35 +14,35 @@
 
             <!-- First Name -->
             <div class="mt-4">
-                <x-label for="first_name" value="First name" />
+                <x-label for="first_name" value="Имя" />
 
                 <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus />
             </div>
 
             <!-- Last Name -->
             <div class="mt-4">
-                <x-label for="last_name" value="Last name" />
+                <x-label for="last_name" value="Фамилия" />
 
                 <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus />
             </div>
 
             <!-- Role -->
             <div class="mt-4">
-                <x-label for="role" value="Role" />
+                <x-label for="role" value="Роль" />
 
                 <x-input id="role" class="block mt-1 w-full" type="text" name="role" :value="old('role')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" value="Электронная почта" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" value="Пароль" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -52,7 +52,7 @@
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-label for="password_confirmation" value="Повторите пароль" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
@@ -61,11 +61,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    Уже зарегестрированы?
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    Зарегестрироваться
                 </x-button>
             </div>
         </form>

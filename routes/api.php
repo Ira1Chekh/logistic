@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\CargoTypeController;
 use App\Http\Controllers\Api\CompanyController;
+use App\Http\Controllers\Api\VehicleTypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('companies', CompanyController::class);
+Route::apiResource('cargo-types', CargoTypeController::class);
+Route::apiResource('vehicle-types', VehicleTypeController::class);

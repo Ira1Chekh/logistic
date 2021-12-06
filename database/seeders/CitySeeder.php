@@ -6,7 +6,7 @@ use App\Models\City;
 use App\Models\Country;
 use Illuminate\Database\Seeder;
 
-class CitiesSeeder extends Seeder
+class CitySeeder extends Seeder
 {
     public function run()
     {

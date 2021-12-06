@@ -13,13 +13,19 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        Панель
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('companies')" :active="request()->routeIs('companies')">
-                        Companies
+                    <x-nav-link :href="route('cargo-types')" :active="request()->routeIs('cargo-types')">
+                        Типы грузов
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('vehicle-types')" :active="request()->routeIs('vehicle-types')">
+                        Типы кузова
                     </x-nav-link>
                 </div>
             </div>

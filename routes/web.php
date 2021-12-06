@@ -23,9 +23,13 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/companies', function () {
-    return view('companies');
-})->middleware(['auth'])->name('companies');
+Route::get('/cargo-types', function () {
+    return view('cargo-types');
+})->middleware(['auth'])->name('cargo-types');
+
+Route::get('/vehicle-types', function () {
+    return view('vehicle-types');
+})->middleware(['auth'])->name('vehicle-types');
 
 Route::view('/{any}', 'dashboard')
     ->middleware(['auth'])

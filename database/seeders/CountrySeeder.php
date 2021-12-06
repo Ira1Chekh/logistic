@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Country;
 use Illuminate\Database\Seeder;
 
-class CountriesSeeder extends Seeder
+class CountrySeeder extends Seeder
 {
     protected const COUNTRIES = [
         'Ukraine',
