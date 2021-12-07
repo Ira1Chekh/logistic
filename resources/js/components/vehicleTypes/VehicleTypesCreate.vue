@@ -3,7 +3,7 @@
         {{ errors }}
     </div>
 
-    <form class="space-y-6" @submit.prevent="savevehicleType">
+    <form class="space-y-6" @submit.prevent="saveVehicleType">
         <div class="space-y-4 rounded-md shadow-sm">
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Название</label>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import usevehicleTypes from '../../composables/vehicleTypes'
+import useVehicleTypes from '../../composables/vehicleTypes'
 import { reactive } from 'vue'
 
 export default {
@@ -32,16 +32,16 @@ export default {
             name: '',
         })
 
-        const { errors, storevehicleType } = usevehicleTypes()
+        const { errors, storeVehicleType } = useVehicleTypes()
 
-        const savevehicleType = async () => {
-            await storevehicleType({ ...form })
+        const saveVehicleType = async () => {
+            await storeVehicleType({ ...form })
         }
 
         return {
             form,
             errors,
-            savevehicleType
+            saveVehicleType
         }
     }
 }

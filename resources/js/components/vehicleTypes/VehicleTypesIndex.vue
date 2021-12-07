@@ -27,7 +27,7 @@
                                      class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                             Редактировать
                         </router-link>
-                        <button @click="deletevehicleType(item.id)"
+                        <button @click="deleteVehicleType(item.id)"
                                 class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                             Удалить</button>
                     </td>
@@ -39,27 +39,27 @@
 </template>
 
 <script>
-import usevehicleTypes from '../../composables/vehicleTypes'
+import useVehicleTypes from '../../composables/vehicleTypes'
 import { onMounted } from 'vue';
 
 export default {
     setup() {
-        const { vehicleTypes, getvehicleTypes, destroyvehicleType } = usevehicleTypes()
+        const { vehicleTypes, getVehicleTypes, destroyVehicleType } = useVehicleTypes()
 
-        const deletevehicleType = async (id) => {
+        const deleteVehicleType = async (id) => {
             if (!window.confirm('Вы уверены?')) {
                 return
             }
 
-            await destroyvehicleType(id)
-            await getvehicleTypes()
+            await destroyVehicleType(id)
+            await getVehicleTypes()
         }
 
-        onMounted(getvehicleTypes)
+        onMounted(getVehicleTypes)
 
         return {
             vehicleTypes,
-            deletevehicleType
+            deleteVehicleType
         }
     }
 }
