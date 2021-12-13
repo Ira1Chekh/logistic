@@ -6,15 +6,17 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\URL;
 
 class InviteUser extends Notification implements ShouldQueue
 {
     use Queueable;
 
+    public string $role;
 
-    public function __construct()
+    public function __construct(string $role)
     {
-        //
+        $this->role = $role;
     }
 
     public function via($notifiable)
@@ -27,8 +29,11 @@ class InviteUser extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject('Приглашение на регистрацию')
             ->greeting('Здравствуйте!')
-            ->line('Вы были приглашены зарегемстрироваться на сайте по оказанию логистических услуг.')
-            ->action('Зарегестрироваться можно по этой ссылке', url('/'))
-            ->line('Спасибо за использование платформы');
+            ->line('Вы были приглашены зарегемстрироваться на сайте Logistics.')
+            ->action('Зарегестрироваться можно по этой ссылке',
+                URL::signedRoute(route($this->role.'.register'))
+            )
+            ->line('Спасибо за использование платформы.')
+            ->salutation('С уважением, команда Logistics.');
     }
 }

@@ -15,6 +15,8 @@ class User extends Authenticatable implements HasMedia
 {
     use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, HasDocuments, HasRole, HasChildren;
 
+    const PAGINATION = 10;
+
     protected $fillable = [
         'first_name',
         'last_name',
@@ -40,4 +42,26 @@ class User extends Authenticatable implements HasMedia
         'email_verified_at' => 'datetime',
         'role' => UserRole::class,
     ];
+
+    protected $appends = ['full_name'];
+
+    public function getFullNameAttribute(): string
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+
+    public function isManager(): bool
+    {
+        return $this->role === UserRole::Manager();
+    }
+
+    public function isClient(): bool
+    {
+        return $this->role === UserRole::Client();
+    }
+
+    public function isDriver(): bool
+    {
+        return $this->role === UserRole::Driver();
+    }
 }

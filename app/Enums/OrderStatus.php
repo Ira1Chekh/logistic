@@ -12,7 +12,7 @@ use BenSampo\Enum\Enum;
  * @method static static Done()
  * @method static static Declined()
  */
-final class ProjectStatus extends Enum
+final class OrderStatus extends Enum
 {
     const Request = 'request';
     const Pending = 'pending';
