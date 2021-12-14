@@ -6,14 +6,16 @@ use App\Enums\UserRole;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
 use Laravel\Sanctum\HasApiTokens;
 use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use function Illuminate\Events\queueable;
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, HasDocuments, HasRole, HasChildren;
+    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, HasDocuments, HasRole, HasChildren, Billable;
 
     const PAGINATION = 10;
 
@@ -45,6 +47,13 @@ class User extends Authenticatable implements HasMedia
 
     protected $appends = ['full_name'];
 
+    protected static function booted()
+    {
+        static::updated(queueable(function ($customer) {
+            $customer->syncStripeCustomerDetails();
+        }));
+    }
+
     public function getFullNameAttribute(): string
     {
         return "{$this->first_name} {$this->last_name}";
@@ -52,16 +61,16 @@ class User extends Authenticatable implements HasMedia
 
     public function isManager(): bool
     {
-        return $this->role === UserRole::Manager();
+        return $this->role === UserRole::Manager;
     }
 
     public function isClient(): bool
     {
-        return $this->role === UserRole::Client();
+        return $this->role === UserRole::Client;
     }
 
     public function isDriver(): bool
     {
-        return $this->role === UserRole::Driver();
+        return $this->role === UserRole::Driver;
     }
 }

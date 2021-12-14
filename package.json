@@ -23,6 +23,8 @@
     "dependencies": {
         "vue": "^3.2.23",
         "vue-loader": "^16.8.3",
-        "vue-router": "^4.0.12"
+        "vue-router": "^4.0.12",
+        "vue-select": "^3.16.0",
+        "vue-simple-search-dropdown": "^1.0.1"
     }
 }

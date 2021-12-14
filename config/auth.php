@@ -96,8 +96,8 @@ return [
     ],
 
     'manager' => [
-        'first_name' => env('MANAGER_FIRST_NAME', '---'),
-        'last_name' => env('MANAGER_LAST_NAME', '---'),
+        'first_name' => env('MANAGER_FIRST_NAME', 'Имя'),
+        'last_name' => env('MANAGER_LAST_NAME', 'Фамилия'),
         'email' => env('MANAGER_MAIL', 'manager@gmail.com')
     ],
 

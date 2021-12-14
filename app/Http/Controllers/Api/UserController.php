@@ -14,7 +14,7 @@ class UserController extends Controller
     {
         return UserResource::collection(
             User::query()
-                ->where('role', $request->role)
+                ->where('role', $request->input('role'))
                 ->paginate(User::PAGINATION)
         );
     }

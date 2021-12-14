@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,11 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+Route::group(['middleware' => 'signed'], function () {
+   Route::get('register/admin');
+   Route::get('register/driver');
+});
+
 Route::get('/orders', function () {
     return view('orders');
 })->middleware(['auth'])->name('orders');
@@ -34,6 +40,14 @@ Route::get('/cargo-types', function () {
 Route::get('/vehicle-types', function () {
     return view('vehicle-types');
 })->middleware(['auth'])->name('vehicle-types');
+
+Route::get('/users', function () {
+    return view('users');
+})->middleware(['auth'])->name('users');
+
+Route::get('/billing-portal', function (Request $request) {
+    return $request->user()->redirectToBillingPortal();
+});
 
 Route::view('/{any}', 'dashboard')
     ->middleware(['auth'])

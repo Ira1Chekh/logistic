@@ -4,8 +4,9 @@ namespace App\Http\Requests;
 
 use App\Enums\UserRole;
 use BenSampo\Enum\Rules\EnumValue;
+use Illuminate\Foundation\Http\FormRequest;
 
-class UserRoleRequest
+class UserRoleRequest extends FormRequest
 {
     public function authorize()
     {

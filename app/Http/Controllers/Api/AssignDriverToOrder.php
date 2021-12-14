@@ -14,6 +14,6 @@ class AssignDriverToOrder extends Controller
         $order->driver()->associate($driver);
         $driver->notify(new DriverWasAssignedToOrder($order));
 
-        return back()->with('Водитель был назначен на заказ.');
+        return back()->with('message', 'Водитель был назначен на заказ.');
     }
 }

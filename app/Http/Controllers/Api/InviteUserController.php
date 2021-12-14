@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\InvitationRequest;
 use App\Notifications\InviteUser;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Notification;
+use function back;
 
 class InviteUserController extends Controller
 {
@@ -14,6 +16,6 @@ class InviteUserController extends Controller
         Notification::route('mail', $request->email)
             ->notify(new InviteUser($request->role));
 
-        return back()->with('Приглашение успешно отправлено!');
+        return back()->with('message', 'Приглашение успешно отправлено!');
     }
 }

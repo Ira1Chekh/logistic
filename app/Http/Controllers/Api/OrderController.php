@@ -37,9 +37,18 @@ class OrderController extends Controller
         return OrderResource::make($order);
     }
 
-    public function show(Order $order): OrderResource
+    public function show(Order $order): array
     {
-        return OrderResource::make($order);
+        $user = auth()->user();
+
+        if ($user->isClient() && $order->isPending()) {
+            $intent = $user->createSetupIntent();
+        }
+
+        return [
+            'order' => OrderResource::make($order),
+            'intent' => $intent ?? null,
+        ];
     }
 
     public function update(OrderRequest $request, Order $order): OrderResource

@@ -3,16 +3,17 @@
 namespace App\Models;
 
 use App\Enums\OrderStatus;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Prunable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Query\Builder;
-use phpDocumentor\Reflection\Types\Boolean;
+use Illuminate\Database\Eloquent\Builder;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Order extends Model implements HasMedia
 {
-    use InteractsWithMedia, HasDocuments;
+    use InteractsWithMedia, HasDocuments, Prunable;
 
     const PAGINATION = 10;
 
@@ -31,6 +32,13 @@ class Order extends Model implements HasMedia
         'start_at' => 'date',
         'due_date' => 'date',
     ];
+
+    public function prunable()
+    {
+        return static::query()
+            ->where('status', OrderStatus::Declined)
+            ->whereMonth('created_at', '<=', Carbon::now()->subMonth()->month);
+    }
 
     public function client(): BelongsTo
     {
@@ -77,16 +85,21 @@ class Order extends Model implements HasMedia
             ->when(
                 $user->isDriver(),
                 fn () => $query->whereIn('status', [
-                    OrderStatus::Paid(),
-                    OrderStatus::In_progress(),
-                    OrderStatus::Done()]
+                    OrderStatus::Paid,
+                    OrderStatus::In_progress,
+                    OrderStatus::Done]
                 )
             );
     }
 
     public function isRequest(): bool
     {
-        return $this->status === OrderStatus::Request();
+        return $this->status === OrderStatus::Request;
+    }
+
+    public function isPending(): bool
+    {
+        return $this->status === OrderStatus::Pending;
     }
 
     public function isOwned(User $user): bool

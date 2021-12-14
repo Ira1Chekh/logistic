@@ -28,7 +28,7 @@ class OrderPolicy
 
     public function update(User $user, Order $order): bool
     {
-        return ($user->isManager() && in_array($order->status, [OrderStatus::Request(), OrderStatus::Pending()]))
-            || ($user->isClient() && $order->status == OrderStatus::Request());
+        return ($user->isManager() && in_array($order->status, [OrderStatus::Request, OrderStatus::Pending]))
+            || ($user->isClient() && $order->status == OrderStatus::Request);
     }
 }
