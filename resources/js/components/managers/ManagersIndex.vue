@@ -1,7 +1,7 @@
 <template>
     <div class="flex place-content-end mb-4">
         <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-            <router-link :to="{ name: 'invite-user', query: { role: allParams.get('role') } }" class="text-sm font-medium">Пригласить пользователя</router-link>
+            <router-link :to="{ name: 'invite.manager' }" class="text-sm font-medium">Пригласить нового менеджера</router-link>
         </div>
     </div>
 
@@ -21,7 +21,7 @@
             </thead>
 
             <tbody class="bg-white divide-y divide-gray-200 divide-solid">
-            <template v-for="item in users" :key="item.id">
+            <template v-for="item in managers" :key="item.id">
                 <tr class="bg-white">
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                         {{ item.full_name }}
@@ -37,19 +37,17 @@
 </template>
 
 <script>
-import useUsers from '../../composables/users'
+import useManagers from '../../composables/managers'
 import { onMounted } from 'vue';
 
 export default {
     setup() {
-        const { users, getUsers } = useUsers()
-        const allParams = new URLSearchParams(window.location.search)
+        const { managers, getManagers } = useManagers()
 
-        onMounted(getUsers)
+        onMounted(getManagers)
 
         return {
-            users,
-            allParams
+            managers
         }
     }
 }

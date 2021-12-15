@@ -3,7 +3,7 @@
         {{ errors }}
     </div>
 
-    <form class="space-y-6" @submit.prevent="processUser">
+    <form class="space-y-6" @submit.prevent="processManager">
         <div class="space-y-4 rounded-md shadow-sm">
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Электронная почта</label>
@@ -11,18 +11,7 @@
                     <input type="email" name="email" id="email"
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                            v-model="form.email">
-<!--                    <input type="hidden" name="role" id="role" :value="allParams.get('role')"-->
-<!--                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"-->
-<!--                          >-->
                 </div>
-<!--                <div class="mt-1">-->
-<!--                    <label for="role" class="block text-sm font-medium text-gray-700">Роль</label>-->
-<!--                    <div class="form-group">-->
-<!--                        <select class='form-control' v-model='form.cargo_type'>-->
-<!--                            <option v-for='item in cargoTypes' :value='item.id'>{{ item.name }}</option>-->
-<!--                        </select>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
 
@@ -35,26 +24,24 @@
 
 <script>
 import { reactive } from 'vue'
-import useUsers from "../../composables/users";
+import useManagers from "../../composables/managers";
 
 export default {
     setup() {
         const form = reactive({
             email: '',
         })
-        const allParams = new URLSearchParams(window.location.search)
 
-        const { errors, inviteUser } = useUsers()
+        const { errors, inviteManager } = useManagers()
 
-        const processUser = async () => {
-            await inviteUser({ ...form, role: allParams.get('role') })
+        const processManager = async () => {
+            await inviteManager({ ...form })
         }
 
         return {
             form,
             errors,
-            processUser,
-            allParams
+            processManager
         }
     }
 }

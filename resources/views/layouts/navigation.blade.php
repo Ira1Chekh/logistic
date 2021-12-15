@@ -29,11 +29,14 @@
                     </x-nav-link>
                 </div>
 
+                @if(Auth::user()->isManager())
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('users', ['role' => 'manager'])" :active="request()->routeIs('users')">
+                    <x-nav-link :href="route('managers')" :active="request()->routeIs('managers')">
                         Менеджеры
                     </x-nav-link>
                 </div>
+                @endif
+
             </div>
 
             <!-- Settings Dropdown -->

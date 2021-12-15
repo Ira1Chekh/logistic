@@ -6,10 +6,10 @@ import CargoTypesEdit from "../components/cargoTypes/CargoTypesEdit";
 import VehicleTypesIndex from "../components/vehicleTypes/VehicleTypesIndex";
 import VehicleTypesCreate from "../components/vehicleTypes/VehicleTypesCreate";
 import VehicleTypesEdit from "../components/vehicleTypes/VehicleTypesEdit";
-import UsersIndex from "../components/users/UsersIndex";
-import InviteUser from "../components/users/InviteUser";
 import OrdersIndex from "../components/orders/OrdersIndex";
 import OrdersCreate from "../components/orders/OrdersCreate";
+import ManagersIndex from "../components/managers/ManagersIndex";
+import InviteManager from "../components/managers/InviteManager";
 
 const routes = [
     {
@@ -45,16 +45,14 @@ const routes = [
         props: true
     },
     {
-        path: '/users',
-        name: 'users.index',
-        component: UsersIndex,
-        props: (route) => ({ query: route.query.role })
+        path: '/managers',
+        name: 'managers.index',
+        component: ManagersIndex,
     },
     {
-        path: '/invite-user',
-        name: 'invite-user',
-        component: InviteUser,
-        props: (route) => ({ query: route.query.role })
+        path: '/invite/manager',
+        name: 'invite.manager',
+        component: InviteManager,
     },
     {
         path: '/orders',

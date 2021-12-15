@@ -12,8 +12,29 @@
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                            v-model="form.name">
                 </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Описание</label>
                 <div class="mt-1">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Тип груза</label>
+                    <input type="text" name="description" id="description"
+                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                           v-model="form.description">
+                </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Вес груза</label>
+                <div class="mt-1">
+                    <input type="number" name="cargo_weight" id="cargo_weight"
+                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                           v-model="form.cargo_weight">
+                </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Тип груза</label>
+                <div class="mt-1">
                     <div class="form-group">
                         <select class='form-control' v-model='form.cargo_type'>
                             <option v-for='item in cargoTypes' :value='item.id'>{{ item.name }}</option>
@@ -21,6 +42,58 @@
                     </div>
                 </div>
             </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Тип кузова</label>
+                <div class="mt-1">
+                    <div class="form-group">
+                        <select class='form-control' v-model='form.vehicle_type'>
+                            <option v-for='item in vehicleTypes' :value='item.id'>{{ item.name }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Дата отпарвки</label>
+                <div class="mt-1">
+                    <input type="date" name="start_date" id="start_date"
+                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                           v-model="form.start_date">
+                </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Дата получения</label>
+                <div class="mt-1">
+                    <input type="date" name="due_date" id="due_date"
+                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                           v-model="form.due_date">
+                </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Город приема груза</label>
+                <div class="mt-1">
+                    <div class="form-group">
+                        <select class='form-control' v-model='form.city_from'>
+                            <option v-for='item in cities' :value='item.id'>{{ item.name }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Город доставки груза</label>
+                <div class="mt-1">
+                    <div class="form-group">
+                        <select class='form-control' v-model='form.city_to'>
+                            <option v-for='item in cities' :value='item.id'>{{ item.name }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <button type="submit"
@@ -39,12 +112,21 @@ export default {
     setup() {
         const form = reactive({
             name: '',
-            cargo_type: 0
+            description: '',
+            cargo_weight: 0,
+            cargo_type: 0,
+            vehicle_type: 0,
+            start_date: '',
+            due_date: '',
+            city_from: 0,
+            city_to: 0,
         })
 
-        const { errors, storeOrder, cargoTypes, getCargoTypes } = useOrders()
+        const { errors, storeOrder, cargoTypes, vehicleTypes, cities, getVehicleTypes, getCargoTypes, getCities } = useOrders()
 
         onMounted(getCargoTypes)
+        onMounted(getVehicleTypes)
+        onMounted(getCities)
 
         const saveOrder = async () => {
             await storeOrder({ ...form })
@@ -54,7 +136,9 @@ export default {
             form,
             errors,
             saveOrder,
-            cargoTypes
+            cargoTypes,
+            vehicleTypes,
+            cities
         }
     }
 }

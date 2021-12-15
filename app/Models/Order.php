@@ -94,12 +94,12 @@ class Order extends Model implements HasMedia
 
     public function isRequest(): bool
     {
-        return $this->status === OrderStatus::Request;
+        return $this->status->value === OrderStatus::Request;
     }
 
     public function isPending(): bool
     {
-        return $this->status === OrderStatus::Pending;
+        return $this->status->value === OrderStatus::Pending;
     }
 
     public function isOwned(User $user): bool

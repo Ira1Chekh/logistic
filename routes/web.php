@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterDriverController;
+use App\Http\Controllers\Auth\RegisterManagerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,8 +27,10 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::group(['middleware' => 'signed'], function () {
-   Route::get('register/admin');
-   Route::get('register/driver');
+   Route::get('register/manager', [RegisterManagerController::class, 'create'])->name('register.manager');
+   Route::get('register/driver', [RegisterDriverController::class, 'create'])->name('register.driver');
+    Route::post('register/manager', [RegisterManagerController::class, 'store'])->name('register.manager.store');
+    Route::post('register/driver', [RegisterDriverController::class, 'store'])->name('register.driver.store');
 });
 
 Route::get('/orders', function () {
@@ -41,9 +45,9 @@ Route::get('/vehicle-types', function () {
     return view('vehicle-types');
 })->middleware(['auth'])->name('vehicle-types');
 
-Route::get('/users', function () {
-    return view('users');
-})->middleware(['auth'])->name('users');
+Route::get('/managers', function () {
+    return view('managers');
+})->middleware(['auth'])->name('managers');
 
 Route::get('/billing-portal', function (Request $request) {
     return $request->user()->redirectToBillingPortal();

@@ -6,6 +6,9 @@ export default function useOrders() {
     const order = ref([])
     const orders = ref([])
     const cargoTypes = ref([])
+    const vehicleTypes = ref([])
+    const cities = ref([])
+    const user = ref([])
 
     const errors = ref('')
     const router = useRouter()
@@ -23,6 +26,21 @@ export default function useOrders() {
     const getCargoTypes = async () => {
         let response = await axios.get('/api/cargo-types')
         cargoTypes.value = response.data.data
+    }
+
+    const getVehicleTypes = async () => {
+        let response = await axios.get('/api/vehicle-types')
+        vehicleTypes.value = response.data.data
+    }
+
+    const getCities = async () => {
+        let response = await axios.get('/api/cities')
+        cities.value = response.data.data
+    }
+
+    const getUser = async () => {
+        let response = await axios.get('/api/user')
+        user.value = response.data.data
     }
 
     const storeOrder = async (data) => {
@@ -73,9 +91,15 @@ export default function useOrders() {
         order,
         orders,
         cargoTypes,
+        vehicleTypes,
+        cities,
+        user,
         getOrder,
         getOrders,
         getCargoTypes,
+        getVehicleTypes,
+        getCities,
+        getUser,
         storeOrder,
         updateOrder,
         updateOrderStatus

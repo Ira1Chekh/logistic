@@ -1,8 +1,11 @@
 <template>
     <div class="flex place-content-end mb-4">
-        <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-            <router-link :to="{ name: 'orders.create' }" class="text-sm font-medium">Создать заказ</router-link>
-        </div>
+        <template v-if="user.role === 'client'">
+            <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
+                <router-link :to="{ name: 'orders.create' }" class="text-sm font-medium">Создать заказ</router-link>
+            </div>
+        </template>
+
     </div>
 
     <div class="overflow-hidden overflow-x-auto min-w-full align-middle sm:rounded-md">
@@ -55,12 +58,14 @@ import { onMounted } from 'vue';
 
 export default {
     setup() {
-        const { orders, getOrders } = useOrders()
+        const { orders, getOrders, user, getUser } = useOrders()
 
         onMounted(getOrders)
+        onMounted(getUser)
 
         return {
             orders,
+            user
         }
     }
 }

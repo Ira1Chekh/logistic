@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Enums\UserRole;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
-use App\Models\User;
+use App\Models\Client;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -30,10 +29,9 @@ class RegisteredUserController extends Controller
 
     protected function createUser(RegisterRequest $request)
     {
-        return User::create([
+        return Client::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
-            'role' => UserRole::Client,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

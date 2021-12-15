@@ -2,11 +2,14 @@
 
 use App\Http\Controllers\Api\AssignDriverToOrder;
 use App\Http\Controllers\Api\CargoTypeController;
-use App\Http\Controllers\Api\InviteUserController;
+use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\ClientController;
+use App\Http\Controllers\Api\DriverController;
+use App\Http\Controllers\Api\ManagerController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\OrderStatusController;
-use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\VehicleTypeController;
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    return UserResource::make($request->user());
 });
 
 Route::group(['middleware' => 'auth:sanctum'], function() {
@@ -33,10 +36,14 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
 
 Route::apiResource('cargo-types', CargoTypeController::class);
 Route::apiResource('vehicle-types', VehicleTypeController::class);
+Route::apiResource('cities', CityController::class)->only('index');
 
-//Route::group(['middleware' => 'can:executeAsManager'], function () {
-    Route::apiResource('users', UserController::class)->only('index');
-    Route::post('invite-user', InviteUserController::class)->name('invite-user');
-//});
+Route::group(['middleware' => 'can:executeAsManager'], function () {
+    Route::apiResource('managers', ManagerController::class)->only('index');
+    Route::post('invite/manager', [ManagerController::class, 'invite'])->name('invite.manager');
+    Route::apiResource('drivers', DriverController::class)->only('index');
+    Route::post('invite/driver', [DriverController::class, 'invite'])->name('invite.driver');
+    Route::apiResource('clients', ClientController::class)->only('index');
+});
 
 

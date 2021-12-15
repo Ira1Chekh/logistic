@@ -61,16 +61,16 @@ class User extends Authenticatable implements HasMedia
 
     public function isManager(): bool
     {
-        return $this->role === UserRole::Manager;
+        return $this->role->value === UserRole::Manager;
     }
 
     public function isClient(): bool
     {
-        return $this->role === UserRole::Client;
+        return $this->role->value === UserRole::Client;
     }
 
     public function isDriver(): bool
     {
-        return $this->role === UserRole::Driver;
+        return $this->role->value === UserRole::Driver;
     }
 }
