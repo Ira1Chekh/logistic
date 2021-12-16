@@ -29,7 +29,7 @@ class Order extends Model implements HasMedia
 
     protected $casts = [
         'status' => OrderStatus::class,
-        'start_at' => 'date',
+        'start_date' => 'date',
         'due_date' => 'date',
     ];
 
@@ -68,11 +68,6 @@ class Order extends Model implements HasMedia
     public function cityTo(): BelongsTo
     {
         return $this->belongsTo(City::class, 'city_to_id');
-    }
-
-    public function calculatePrice(City $cityFrom, City $cityTo, int $cargoWeight)
-    {
-        return City::calculateDistance($cityFrom, $cityTo) * $cargoWeight * 100;
     }
 
     public function scopeFilteredList(Builder $query, User $user)

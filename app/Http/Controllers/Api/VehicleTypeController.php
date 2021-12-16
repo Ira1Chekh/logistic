@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Requests\DeleteVehicleTypeRequest;
 use App\Http\Requests\TypeRequest;
 use App\Http\Resources\DictionaryResource;
 use App\Models\VehicleType;
@@ -32,7 +33,7 @@ class VehicleTypeController
         return DictionaryResource::make($vehicleType);
     }
 
-    public function destroy(VehicleType $vehicleType)
+    public function destroy(DeleteVehicleTypeRequest $request, VehicleType $vehicleType)
     {
         $vehicleType->delete();
 

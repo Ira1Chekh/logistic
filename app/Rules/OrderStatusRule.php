@@ -27,6 +27,6 @@ class OrderStatusRule implements Rule
 
     public function message()
     {
-        return 'This status change is invalid.';
+        return 'Нет доступа к смене статуса заказа.';
     }
 }

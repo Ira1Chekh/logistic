@@ -10,6 +10,7 @@ import OrdersIndex from "../components/orders/OrdersIndex";
 import OrdersCreate from "../components/orders/OrdersCreate";
 import ManagersIndex from "../components/managers/ManagersIndex";
 import InviteManager from "../components/managers/InviteManager";
+import OrdersEdit from "../components/orders/OrdersEdit";
 
 const routes = [
     {
@@ -63,7 +64,13 @@ const routes = [
         path: '/orders/create',
         name: 'orders.create',
         component: OrdersCreate
-    }
+    },
+    {
+        path: '/orders/:id/edit',
+        name: 'orders.edit',
+        component: OrdersEdit,
+        props: true
+    },
 ];
 
 export default createRouter({

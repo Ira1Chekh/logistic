@@ -9,7 +9,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class RegisteredUserController extends Controller
+class RegisteredUserController extends Controller implements CanRegister
 {
     public function create()
     {
@@ -18,22 +18,17 @@ class RegisteredUserController extends Controller
 
     public function store(RegisterRequest $request)
     {
-        $user = $this->createUser($request);
+        $user = Client::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
 
         //event(new Registered($user));
 
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
-    }
-
-    protected function createUser(RegisterRequest $request)
-    {
-        return Client::create([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
     }
 }

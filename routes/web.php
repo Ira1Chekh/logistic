@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Auth\RegisterDriverController;
-use App\Http\Controllers\Auth\RegisterManagerController;
+use App\Http\Controllers\Auth\RegisteredDriverController;
+use App\Http\Controllers\Auth\RegisteredManagerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,10 +27,10 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::group(['middleware' => 'signed'], function () {
-   Route::get('register/manager', [RegisterManagerController::class, 'create'])->name('register.manager');
-   Route::get('register/driver', [RegisterDriverController::class, 'create'])->name('register.driver');
-    Route::post('register/manager', [RegisterManagerController::class, 'store'])->name('register.manager.store');
-    Route::post('register/driver', [RegisterDriverController::class, 'store'])->name('register.driver.store');
+   Route::get('register/manager', [RegisteredManagerController::class, 'create'])->name('register.manager');
+   Route::get('register/driver', [RegisteredDriverController::class, 'create'])->name('register.driver');
+    Route::post('register/manager', [RegisteredManagerController::class, 'store'])->name('register.manager.store');
+    Route::post('register/driver', [RegisteredDriverController::class, 'store'])->name('register.driver.store');
 });
 
 Route::get('/orders', function () {

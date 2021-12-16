@@ -17,11 +17,11 @@ class OrderRequest extends FormRequest
         return [
             'name' => ['required', 'string'],
             'description' => ['required', 'string'],
-            'cargo_weight' => ['required', 'string'],
-            'cargo_type' => ['required', 'exists:cargo_types:id'],
-            'vehicle_type' => ['required', 'exists:vehicle_types:id'],
-            'start_date' => ['required'],
-            'due_date' => ['required'],
+            'cargo_weight' => ['required', 'numeric', 'min:0', 'max:99999'],
+            'cargo_type' => ['required', 'exists:cargo_types,id'],
+            'vehicle_type' => ['required', 'exists:vehicle_types,id'],
+            'start_date' => ['required', 'date', 'after:'.now()->toDateString()],
+            'due_date' => ['required', 'date', 'after:start_date'],
             'city_from' => ['required', 'exists:cities,id'],
             'city_to' => ['required', 'exists:cities,id', Rule::notIn([$this->city_from])]
         ];

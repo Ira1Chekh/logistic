@@ -18,11 +18,27 @@
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Статус</span>
+                </th>
+                <th class="px-6 py-3 bg-gray-50">
+                    <span
                         class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Тип груза</span>
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
                         class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Тип кузова</span>
+                </th>
+                <th class="px-6 py-3 bg-gray-50">
+                    <span
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Клиент</span>
+                </th>
+                <th class="px-6 py-3 bg-gray-50">
+                    <span
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Водитель</span>
+                </th>
+                <th class="px-6 py-3 bg-gray-50">
+                    <span
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Цена</span>
                 </th>
             </tr>
             </thead>
@@ -34,10 +50,22 @@
                         {{ item.name }}
                     </td>
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                        {{ item.status }}
+                    </td>
+                    <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                         {{ item.cargo_type }}
                     </td>
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                         {{ item.vehicle_type }}
+                    </td>
+                    <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                        {{ item.client.full_name }}
+                    </td>
+                    <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                        {{ item.driver ? item.driver.full_name : '---' }}
+                    </td>
+                    <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                        {{ item.price }}
                     </td>
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                         <router-link :to="{ name: 'orders.edit', params: { id: item.id } }"

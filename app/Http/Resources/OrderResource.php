@@ -28,7 +28,7 @@ class OrderResource extends JsonResource
             'city_from' => $this->whenLoaded('cityFrom', function () {
                 return $this->cityFrom->name;
             }),
-            'city_to' => $this->whenLoaded('cityFrom', function () {
+            'city_to' => $this->whenLoaded('cityTo', function () {
                 return $this->cityTo->name;
             }),
             'documents' => DocumentResource::collection($this->whenLoaded('media')),

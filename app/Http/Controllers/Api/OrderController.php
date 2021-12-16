@@ -6,60 +6,37 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
+use App\Services\OrderService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    public function __construct()
+    public OrderService $orderService;
+
+    public function __construct(OrderService $orderService)
     {
         $this->authorizeResource(Order::class, 'order');
+        $this->orderService = $orderService;
     }
 
     public function index(Request $request): AnonymousResourceCollection
     {
-        return OrderResource::collection(
-            Order::query()
-                ->filteredList($request->user())
-                ->paginate(Order::PAGINATION)
-        );
+        return $this->orderService->index($request->user());
     }
 
     public function store(OrderRequest $request): OrderResource
     {
-        $order = Order::make($request->validated())
-            ->client()->associate($request->user())
-            ->cargoType()->associate($request->input('cargo_type'))
-            ->vehicleType()->associate($request->input('vehicle_type'))
-            ->cityFrom()->associate($request->input('city_from'))
-            ->cityTo()->associate($request->input('city_to'));
-
-        return OrderResource::make($order);
+        return $this->orderService->store($request);
     }
 
     public function show(Order $order): array
     {
-        $user = auth()->user();
-
-        if ($user->isClient() && $order->isPending()) {
-            $intent = $user->createSetupIntent();
-        }
-
-        return [
-            'order' => OrderResource::make($order),
-            'intent' => $intent ?? null,
-        ];
+        return $this->orderService->show($order, auth()->user());
     }
 
     public function update(OrderRequest $request, Order $order): OrderResource
     {
-        $order->fill($request->validated())
-            ->cargoType()->associate($request->input('cargo_type'))
-            ->vehicleType()->associate($request->input('vehicle_type'))
-            ->cityFrom()->associate($request->input('city_from'))
-            ->cityTo()->associate($request->input('city_to'));
-
-        return OrderResource::make($order);
+        return $this->orderService->update($request, $order);
     }
 }
