@@ -27,13 +27,13 @@ class InviteUser extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Приглашение на регистрацию')
-            ->greeting('Здравствуйте!')
-            ->line('Вы были приглашены зарегемстрироваться на сайте Logistics.')
-            ->action('Зарегестрироваться можно по этой ссылке',
+            ->subject('Запрошення на реєстрацію')
+            ->greeting('Вітаю!')
+            ->line('Ви були запрошені зареєструватися на сайті з надання логістичних послуг.')
+            ->action('Зареєструватися можна за цим посиланням: ',
                 URL::signedRoute($this->role.'.register')
             )
-            ->line('Спасибо за использование платформы.')
-            ->salutation('С уважением, команда Logistics.');
+            ->line('Дякуємо за використання платформи.')
+            ->salutation('З повагою, команда Logistics.');
     }
 }

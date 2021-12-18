@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Enums\OrderStatus;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class OrderResource extends JsonResource
@@ -12,6 +13,7 @@ class OrderResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'status' => $this->status,
+            'status_name' => OrderStatus::getDescription($this->status),
             'description' => $this->description,
             'cargo_weight' => $this->cargo_weight,
             'price' => $this->price,

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Enums\UserRole;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -14,6 +15,7 @@ class UserResource extends JsonResource
             'last_name' => $this->last_name,
             'full_name' => $this->full_name,
             'role' => $this->role,
+            'role_name' => UserRole::getDescription($this->role),
             'email' => $this->email,
             'documents' => DocumentResource::collection($this->whenLoaded('media')),
         ];

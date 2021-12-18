@@ -13,29 +13,35 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('orders')" :active="request()->routeIs('orders')">
-                        Заказы
+                        Закази
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('cargo-types')" :active="request()->routeIs('cargo-types')">
-                        Типы грузов
+                        Типи вантажу
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('vehicle-types')" :active="request()->routeIs('vehicle-types')">
-                        Типы кузова
+                        Типи кузова
                     </x-nav-link>
                 </div>
 
                 @if(Auth::user()->isManager())
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('managers')" :active="request()->routeIs('managers')">
-                        Менеджеры
+                        Менеджери
                     </x-nav-link>
                 </div>
                 @endif
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('settings')" :active="request()->routeIs('settings')">
+                        Налаштування
+                    </x-nav-link>
+                </div>
 
             </div>
 

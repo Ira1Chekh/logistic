@@ -27,34 +27,39 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::group(['middleware' => 'signed'], function () {
-   Route::get('register/manager', [RegisteredManagerController::class, 'create'])->name('register.manager');
-   Route::get('register/driver', [RegisteredDriverController::class, 'create'])->name('register.driver');
+    Route::get('register/manager', [RegisteredManagerController::class, 'create'])->name('register.manager');
+    Route::get('register/driver', [RegisteredDriverController::class, 'create'])->name('register.driver');
     Route::post('register/manager', [RegisteredManagerController::class, 'store'])->name('register.manager.store');
     Route::post('register/driver', [RegisteredDriverController::class, 'store'])->name('register.driver.store');
 });
 
-Route::get('/orders', function () {
-    return view('orders');
-})->middleware(['auth'])->name('orders');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/orders', function () {
+        return view('orders');
+    })->name('orders');
 
-Route::get('/cargo-types', function () {
-    return view('cargo-types');
-})->middleware(['auth'])->name('cargo-types');
+    Route::get('/cargo-types', function () {
+        return view('cargo-types');
+    })->name('cargo-types');
 
-Route::get('/vehicle-types', function () {
-    return view('vehicle-types');
-})->middleware(['auth'])->name('vehicle-types');
+    Route::get('/vehicle-types', function () {
+        return view('vehicle-types');
+    })->name('vehicle-types');
 
-Route::get('/managers', function () {
-    return view('managers');
-})->middleware(['auth'])->name('managers');
+    Route::get('/settings', function () {
+        return view('settings');
+    })->name('settings');
 
-Route::get('/billing-portal', function (Request $request) {
-    return $request->user()->redirectToBillingPortal();
+    Route::get('/managers', function () {
+        return view('managers');
+    })->name('managers');
+
+    Route::get('/billing-portal', function (Request $request) {
+        return $request->user()->redirectToBillingPortal();
+    });
+
+    Route::view('/{any}', 'dashboard')
+        ->where('any', '.*');
 });
-
-Route::view('/{any}', 'dashboard')
-    ->middleware(['auth'])
-    ->where('any', '.*');
 
 

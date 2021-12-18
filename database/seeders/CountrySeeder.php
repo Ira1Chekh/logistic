@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class CountrySeeder extends Seeder
 {
     protected const COUNTRIES = [
-        'Ukraine',
+        'Україна',
     ];
 
     public function run()

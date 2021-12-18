@@ -2,7 +2,7 @@
     <div class="flex place-content-end mb-4">
         <template v-if="user.role === 'client'">
             <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-                <router-link :to="{ name: 'orders.create' }" class="text-sm font-medium">Создать заказ</router-link>
+                <router-link :to="{ name: 'orders.create' }" class="text-sm font-medium">Створити заказ</router-link>
             </div>
         </template>
 
@@ -14,7 +14,7 @@
             <tr>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Название</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Назва</span>
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
@@ -22,7 +22,7 @@
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Тип груза</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Тип грузу</span>
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
@@ -30,15 +30,15 @@
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Клиент</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Клієнт</span>
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Водитель</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Водій</span>
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Цена</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Ціна</span>
                 </th>
             </tr>
             </thead>
@@ -50,7 +50,7 @@
                         {{ item.name }}
                     </td>
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
-                        {{ item.status }}
+                        {{ item.status_name }}
                     </td>
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                         {{ item.cargo_type }}
@@ -70,7 +70,7 @@
                     <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                         <router-link :to="{ name: 'orders.edit', params: { id: item.id } }"
                                      class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
-                            Редактировать
+                            Редагувати
                         </router-link>
                     </td>
                 </tr>

@@ -12,7 +12,7 @@ class CitySeeder extends Seeder
     {
         $this->seedFromJson(
             file_get_contents(base_path('database/seeders/cities/ukraine.json')),
-            Country::where('name', 'Ukraine')->firstOrFail(),
+            Country::where('name', 'Україна')->firstOrFail(),
         );
     }
 

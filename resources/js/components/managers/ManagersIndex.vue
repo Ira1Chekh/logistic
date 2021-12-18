@@ -1,7 +1,7 @@
 <template>
     <div class="flex place-content-end mb-4">
         <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-            <router-link :to="{ name: 'invite.manager' }" class="text-sm font-medium">Пригласить нового менеджера</router-link>
+            <router-link :to="{ name: 'invite.manager' }" class="text-sm font-medium">Запросити нового менеджера</router-link>
         </div>
     </div>
 
@@ -11,11 +11,11 @@
             <tr>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Имя Фамилия</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Им'я Прізвище</span>
                 </th>
                 <th class="px-6 py-3 bg-gray-50">
                     <span
-                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Электорнная почта</span>
+                        class="text-xs font-medium tracking-wider leading-4 text-left text-gray-500 uppercase">Електорнна пошта</span>
                 </th>
             </tr>
             </thead>

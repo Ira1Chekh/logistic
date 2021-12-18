@@ -6,7 +6,7 @@
     <form class="space-y-6" @submit.prevent="saveOrder">
         <div class="space-y-4 rounded-md shadow-sm">
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Название</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Назва</label>
                 <div class="mt-1">
                     <input type="text" name="name" id="name"
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -15,7 +15,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Описание</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Опис</label>
                 <div class="mt-1">
                     <input type="text" name="description" id="description"
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -24,7 +24,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Вес груза</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Вага грузу</label>
                 <div class="mt-1">
                     <input type="number" name="cargo_weight" id="cargo_weight"
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -55,7 +55,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Дата отпарвки</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Дата відправлення</label>
                 <div class="mt-1">
                     <input type="date" name="start_date" id="start_date"
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -64,7 +64,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Дата получения</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Дата отримання</label>
                 <div class="mt-1">
                     <input type="date" name="due_date" id="due_date"
                            class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -73,7 +73,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Город приема груза</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Місто відправлення грузу</label>
                 <div class="mt-1">
                     <div class="form-group">
                         <select class='form-control' v-model='form.city_from'>
@@ -84,7 +84,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Город доставки груза</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Місто доставки грузу</label>
                 <div class="mt-1">
                     <div class="form-group">
                         <select class='form-control' v-model='form.city_to'>
@@ -98,7 +98,7 @@
 
         <button type="submit"
                 class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25">
-            Создать
+            Зберігти
         </button>
     </form>
 </template>

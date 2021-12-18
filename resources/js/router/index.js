@@ -11,6 +11,8 @@ import OrdersCreate from "../components/orders/OrdersCreate";
 import ManagersIndex from "../components/managers/ManagersIndex";
 import InviteManager from "../components/managers/InviteManager";
 import OrdersEdit from "../components/orders/OrdersEdit";
+import SettingsIndex from "../components/settings/SettingsIndex";
+import SettingsEdit from "../components/settings/SettingsEdit";
 
 const routes = [
     {
@@ -70,6 +72,16 @@ const routes = [
         name: 'orders.edit',
         component: OrdersEdit,
         props: true
+    },
+    {
+        path: '/settings',
+        name: 'settings.index',
+        component: SettingsIndex
+    },
+    {
+        path: '/settings/create',
+        name: 'settings.create',
+        component: SettingsEdit
     },
 ];
 

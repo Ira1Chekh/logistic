@@ -2,6 +2,7 @@
 
 namespace App\Enums;
 
+use BenSampo\Enum\Contracts\LocalizedEnum;
 use BenSampo\Enum\Enum;
 
 /**
@@ -9,7 +10,7 @@ use BenSampo\Enum\Enum;
  * @method static static Client()
  * @method static static Driver()
  */
-final class UserRole extends Enum
+final class UserRole extends Enum implements LocalizedEnum
 {
     const Manager = 'manager';
     const Client = 'client';
