@@ -95,7 +95,7 @@ export default {
         onMounted(getUser)
 
         const declineOrder = async (id) => {
-            updateStatus('decline', id);
+            updateStatus('declined', id);
         };
 
         return {

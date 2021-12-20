@@ -29,13 +29,14 @@ class DriverWasAssignedToOrder extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Заказ назначен')
-            ->greeting('Здравствуйте '.$notifiable->full_name.'!')
-            ->line('Вам назначили заказ '.$this->order->name.'.')
-            ->action('Посмотреть подробности заказа можно по этой ссылке',
+            ->subject('Заказ призначений')
+            ->greeting('Вітаю, '.$notifiable->full_name.'!')
+            ->line('Вам призначили на виконання заказ '.$this->order->name.'.')
+            ->line('Переглянути деталі замовлення можна за посиланням:')
+            ->action('Замовлення',
                 URL::signedRoute(route('orders.show', [$this->order]))
             )
-            ->line('Спасибо за использование платформы.')
-            ->salutation('С уважением, команда Logistics.');
+            ->line('Дякуємо за використання платформи.')
+            ->salutation('З повагою, команда Logistics.');
     }
 }

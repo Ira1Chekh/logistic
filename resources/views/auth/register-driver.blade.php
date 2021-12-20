@@ -9,7 +9,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register.driver.store') }}">
+        <form method="POST" action="{{ Illuminate\Support\Facades\URL::signedRoute('register.driver')}}">
         @csrf
 
         <!-- First Name -->

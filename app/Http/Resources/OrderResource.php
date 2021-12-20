@@ -3,7 +3,6 @@
 namespace App\Http\Resources;
 
 use App\Enums\OrderStatus;
-use App\Models\VehicleType;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class OrderResource extends JsonResource

@@ -13,6 +13,9 @@ import InviteManager from "../components/managers/InviteManager";
 import OrdersEdit from "../components/orders/OrdersEdit";
 import SettingsIndex from "../components/settings/SettingsIndex";
 import SettingsEdit from "../components/settings/SettingsEdit";
+import DriversIndex from "../components/drivers/DriversIndex";
+import InviteDriver from "../components/drivers/InviteDriver";
+import ClientsIndex from "../components/clients/ClientsIndex";
 
 const routes = [
     {
@@ -56,6 +59,21 @@ const routes = [
         path: '/invite/manager',
         name: 'invite.manager',
         component: InviteManager,
+    },
+    {
+        path: '/drivers',
+        name: 'drivers.index',
+        component: DriversIndex,
+    },
+    {
+        path: '/invite/driver',
+        name: 'invite.driver',
+        component: InviteDriver,
+    },
+    {
+        path: '/clients',
+        name: 'clients.index',
+        component: ClientsIndex,
     },
     {
         path: '/orders',

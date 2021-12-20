@@ -30,8 +30,8 @@ class InviteUser extends Notification implements ShouldQueue
             ->subject('Запрошення на реєстрацію')
             ->greeting('Вітаю!')
             ->line('Ви були запрошені зареєструватися на сайті з надання логістичних послуг.')
-            ->action('Зареєструватися можна за цим посиланням: ',
-                URL::signedRoute($this->role.'.register')
+            ->action('Зареєструватись',
+                URL::signedRoute('register.'.$this->role)
             )
             ->line('Дякуємо за використання платформи.')
             ->salutation('З повагою, команда Logistics.');

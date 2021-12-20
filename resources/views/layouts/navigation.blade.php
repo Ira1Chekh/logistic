@@ -35,12 +35,33 @@
                         Менеджери
                     </x-nav-link>
                 </div>
-                @endif
-
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('drivers')" :active="request()->routeIs('drivers')">
+                        Водії
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
+                        Клієнти
+                    </x-nav-link>
+                </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('settings')" :active="request()->routeIs('settings')">
                         Налаштування
                     </x-nav-link>
+                </div>
+                @endif
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <x-dropdown-link :href="route('logout')"
+                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                            Вийти
+                        </x-dropdown-link>
+                    </form>
                 </div>
 
             </div>
