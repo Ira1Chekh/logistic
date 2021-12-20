@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class OrderRequest extends FormRequest
+class OrderStoreRequest extends FormRequest
 {
     public function authorize()
     {

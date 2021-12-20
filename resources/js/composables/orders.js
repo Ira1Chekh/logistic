@@ -9,6 +9,7 @@ export default function useOrders() {
     const vehicleTypes = ref([])
     const cities = ref([])
     const user = ref([])
+    const drivers = ref([])
 
     const errors = ref('')
     const router = useRouter()
@@ -20,7 +21,7 @@ export default function useOrders() {
 
     const getOrder = async (id) => {
         let response = await axios.get(`/api/orders/${id}`)
-        order.value = response.data.data
+        order.value = response.data.order
     }
 
     const getCargoTypes = async () => {
@@ -41,6 +42,11 @@ export default function useOrders() {
     const getUser = async () => {
         let response = await axios.get('/api/user')
         user.value = response.data.data
+    }
+
+    const getDrivers = async () => {
+        let response = await axios.get('/api/drivers')
+        drivers.value = response.data.data
     }
 
     const storeOrder = async (data) => {
@@ -86,6 +92,20 @@ export default function useOrders() {
         }
     }
 
+    const updateStatus = async (value, id) => {
+        errors.value = ''
+        try {
+            await axios.put(`/api/orders/${id}/status`, {'status': value})
+            await router.push({ name: 'orders.status.update' })
+        } catch (e) {
+            if (e.response.status === 422) {
+                for (const key in e.response.data.errors) {
+                    errors.value += e.response.data.errors[key][0] + ' ';
+                }
+            }
+        }
+    };
+
     return {
         errors,
         order,
@@ -94,14 +114,17 @@ export default function useOrders() {
         vehicleTypes,
         cities,
         user,
+        drivers,
         getOrder,
         getOrders,
         getCargoTypes,
         getVehicleTypes,
         getCities,
         getUser,
+        getDrivers,
         storeOrder,
         updateOrder,
-        updateOrderStatus
+        updateOrderStatus,
+        updateStatus
     }
 }

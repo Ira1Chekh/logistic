@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use App\Enums\OrderStatus;
+use App\Models\VehicleType;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class OrderResource extends JsonResource
@@ -17,24 +18,15 @@ class OrderResource extends JsonResource
             'description' => $this->description,
             'cargo_weight' => $this->cargo_weight,
             'price' => $this->price,
-            'start_date' => $this->start_date->format('d.m.Y H:i'),
-            'due_date'  => $this->due_date->format('d.m.Y H:i'),
+            'start_date' => $this->start_date->format('Y-m-d'),
+            'due_date'  => $this->due_date->format('Y-m-d'),
             'client' => UserResource::make($this->whenLoaded('client')),
             'driver' => UserResource::make($this->whenLoaded('driver')),
-            'cargo_type' => $this->whenLoaded('cargoType', function () {
-                return $this->cargoType->name;
-            }),
-            'vehicle_type' => $this->whenLoaded('vehicleType', function () {
-                return $this->vehicleType->name;
-            }),
-            'city_from' => $this->whenLoaded('cityFrom', function () {
-                return $this->cityFrom->name;
-            }),
-            'city_to' => $this->whenLoaded('cityTo', function () {
-                return $this->cityTo->name;
-            }),
+            'cargo_type' => CargoTypeResource::make($this->whenLoaded('cargoType')),
+            'vehicle_type' => VehicleTypeResource::make($this->whenLoaded('vehicleType')),
+            'city_from' => CityResource::make($this->whenLoaded('cityFrom')),
+            'city_to' => CityResource::make($this->whenLoaded('cityTo')),
             'documents' => DocumentResource::collection($this->whenLoaded('media')),
         ];
     }
-
 }

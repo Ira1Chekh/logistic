@@ -2,9 +2,11 @@
 
 namespace App\Services;
 
-use App\Http\Requests\OrderRequest;
+use App\Http\Requests\OrderStoreRequest;
+use App\Http\Requests\OrderUpdateRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\City;
+use App\Models\GeneralSettings;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -27,12 +29,14 @@ class OrderService
     public function show(Order $order, User $user): array
     {
         return [
-            'order' => OrderResource::make($order),
+            'order' => OrderResource::make(
+                $order->load('client', 'driver', 'cargoType', 'vehicleType', 'cityFrom', 'cityTo')
+            ),
             'intent' => $user->isClient() && $order->isPending() ? $this->makeIntentToPurchase($user) : null,
         ];
     }
 
-    public function store(OrderRequest $request): OrderResource
+    public function store(OrderStoreRequest $request): OrderResource
     {
         $order = Order::make($request->validated());
         $order->price = $this->calculatePrice(
@@ -50,13 +54,14 @@ class OrderService
         return OrderResource::make($order);
     }
 
-    public function update(OrderRequest $request, Order $order): OrderResource
+    public function update(OrderUpdateRequest $request, Order $order): OrderResource
     {
         $order->fill($request->validated())
             ->cargoType()->associate($request->input('cargo_type'))
             ->vehicleType()->associate($request->input('vehicle_type'))
             ->cityFrom()->associate($request->input('city_from'))
-            ->cityTo()->associate($request->input('city_to'));
+            ->cityTo()->associate($request->input('city_to'))
+            ->driver()->associate($request->input('driver'));
         $order->update(['price' => $this->calculatePrice(
             $request->input('city_from'),
             $request->input('city_to'),
@@ -80,8 +85,10 @@ class OrderService
     {
         $cityFrom = $this->getCityById($cityFrom);
         $cityTo = $this->getCityById($cityTo);
+        $settings = app(GeneralSettings::class);
+        $sum = $this->calculateDistance($cityFrom, $cityTo) * $cargoWeight * $settings->fuel_price;
 
-        return $this->calculateDistance($cityFrom, $cityTo) * $cargoWeight;
+        return round(($sum + (($settings->tax_percent + $settings->enterprise_percent) * $sum / 100))/100);
     }
 
     public function calculateDistance(City $cityFrom, City $cityTo): float|int
