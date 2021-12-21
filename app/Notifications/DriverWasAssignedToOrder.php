@@ -33,9 +33,7 @@ class DriverWasAssignedToOrder extends Notification implements ShouldQueue
             ->greeting('Вітаю, '.$notifiable->full_name.'!')
             ->line('Вам призначили на виконання заказ '.$this->order->name.'.')
             ->line('Переглянути деталі замовлення можна за посиланням:')
-            ->action('Замовлення',
-                URL::signedRoute(route('orders.show', [$this->order]))
-            )
+            ->action('Замовлення', route('orders.view', [$this->order->id]))
             ->line('Дякуємо за використання платформи.')
             ->salutation('З повагою, команда Logistics.');
     }

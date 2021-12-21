@@ -16,6 +16,8 @@ import SettingsEdit from "../components/settings/SettingsEdit";
 import DriversIndex from "../components/drivers/DriversIndex";
 import InviteDriver from "../components/drivers/InviteDriver";
 import ClientsIndex from "../components/clients/ClientsIndex";
+import OrderShow from "../components/orders/OrderShow";
+import OrderDriverEdit from "../components/orders/OrderDriverEdit";
 
 const routes = [
     {
@@ -89,6 +91,18 @@ const routes = [
         path: '/orders/:id/edit',
         name: 'orders.edit',
         component: OrdersEdit,
+        props: true
+    },
+    {
+        path: '/orders/:id',
+        name: 'orders.show',
+        component: OrderShow,
+        props: true
+    },
+    {
+        path: '/orders/:id/driver',
+        name: 'orders.drivers.edit',
+        component: OrderDriverEdit,
         props: true
     },
     {

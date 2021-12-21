@@ -78,25 +78,11 @@ export default function useOrders() {
         }
     }
 
-    const updateOrderStatus = async (id) => {
-        errors.value = ''
-        try {
-            await axios.patch(`/api/orders/${id}/status`, order.value)
-            await router.push({ name: 'orders.status.update' })
-        } catch (e) {
-            if (e.response.status === 422) {
-                for (const key in e.response.data.errors) {
-                    errors.value += e.response.data.errors[key][0] + ' ';
-                }
-            }
-        }
-    }
-
     const updateStatus = async (value, id) => {
         errors.value = ''
         try {
             await axios.put(`/api/orders/${id}/status`, {'status': value})
-            await router.push({ name: 'orders.status.update' })
+            await router.push({ name: 'orders.index' })
         } catch (e) {
             if (e.response.status === 422) {
                 for (const key in e.response.data.errors) {
@@ -105,6 +91,21 @@ export default function useOrders() {
             }
         }
     };
+
+    const setDriver = async (id, driverId) => {
+        errors.value = ''
+        try {
+            await axios.put(`/api/orders/${id}/driver/${driverId}`)
+            await router.push({ name: 'orders.index' })
+        } catch (e) {
+            if (e.response.status === 422) {
+                for (const key in e.response.data.errors) {
+                    errors.value += e.response.data.errors[key][0] + ' ';
+                }
+            }
+        }
+    };
+
 
     return {
         errors,
@@ -124,7 +125,7 @@ export default function useOrders() {
         getDrivers,
         storeOrder,
         updateOrder,
-        updateOrderStatus,
-        updateStatus
+        updateStatus,
+        setDriver
     }
 }

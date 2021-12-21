@@ -17,6 +17,8 @@
                     </x-nav-link>
                 </div>
 
+                @if(Auth::user()->isManager())
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('cargo-types')" :active="request()->routeIs('cargo-types')">
                         Типи вантажу
@@ -29,7 +31,6 @@
                     </x-nav-link>
                 </div>
 
-                @if(Auth::user()->isManager())
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('managers')" :active="request()->routeIs('managers')">
                         Менеджери

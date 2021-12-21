@@ -32,15 +32,7 @@
             </div>
 
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Водій: {{ order.driver.full_name }}</label>
-                <div class="mt-1">
-                    <div class="form-group">
-                        <select class='form-control' v-model='order.driver'>
-                            <option :value='order.driver.id'>{{ order.driver.full_name }}</option>
-                            <option v-for='item in drivers' :value='item.id'>{{ item.full_name }}</option>
-                        </select>
-                    </div>
-                </div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Водій: {{ order.driver ? order.driver.full_name : '---' }}</label>
             </div>
 
             <div>
@@ -148,16 +140,12 @@ export default {
             getVehicleTypes();
             getCities();
         })
-        // onMounted()
-        // onMounted()
-        // onMounted()
 
         const saveOrder = async () => {
             await updateOrder(props.id)
         }
 
         return {
-            // ...useOrders(),
             errors,
             order,
             saveOrder,

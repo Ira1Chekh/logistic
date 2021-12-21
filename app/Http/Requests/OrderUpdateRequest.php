@@ -25,7 +25,6 @@ class OrderUpdateRequest extends FormRequest
             'due_date' => ['required', 'date', 'after:start_date'],
             'city_from' => ['required', 'exists:cities,id'],
             'city_to' => ['required', 'exists:cities,id', Rule::notIn([$this->city_from])],
-            'driver' => ['required', 'exists:users,id'],
         ];
     }
 }

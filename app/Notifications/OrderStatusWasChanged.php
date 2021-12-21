@@ -33,7 +33,7 @@ class OrderStatusWasChanged extends Notification implements ShouldQueue
             ->greeting('Вітаю, '.$notifiable->full_name.'!')
             ->line($this->generateMessage())
             ->line('Переглянути свої замовлення можна за посиланням:')
-            ->action('Замовлення', route('orders'))
+            ->action('Замовлення', route('orders.view', [$this->order->id]))
             ->line('Якщо у вас виникли питання, ви можете зв\'язатись з оператором чату на головній сторінці.')
             ->line('Дякуємо за використання платформи.')
             ->salutation('З повагою, команда Logistics.');

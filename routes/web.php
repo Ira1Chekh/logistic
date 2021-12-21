@@ -38,6 +38,10 @@ Route::group(['middleware' => 'auth'], function() {
         return view('orders');
     })->name('orders');
 
+    Route::get('/orders/{order}', function () {
+        return view('order');
+    })->name('orders.view');
+
     Route::get('/cargo-types', function () {
         return view('cargo-types');
     })->name('cargo-types');
@@ -53,6 +57,14 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/managers', function () {
         return view('managers');
     })->name('managers');
+
+    Route::get('/drivers', function () {
+        return view('drivers');
+    })->name('drivers');
+
+    Route::get('/clients', function () {
+        return view('clients');
+    })->name('clients');
 
     Route::get('/billing-portal', function (Request $request) {
         return $request->user()->redirectToBillingPortal();

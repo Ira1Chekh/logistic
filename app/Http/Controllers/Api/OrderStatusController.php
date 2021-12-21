@@ -10,7 +10,7 @@ use App\Notifications\OrderStatusWasChanged;
 
 class OrderStatusController extends Controller
 {
-    public function __invoke(Order $order, OrderStatusRequest $request)
+    public function __invoke(Order $order, OrderStatusRequest $request): OrderResource
     {
         $order->update($request->validated());
 
@@ -18,6 +18,6 @@ class OrderStatusController extends Controller
            $order->client->notify(new OrderStatusWasChanged($order));
         }
 
-        return redirect()->route('orders');
+        return OrderResource::make($order);
     }
 }

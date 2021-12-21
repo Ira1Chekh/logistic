@@ -60,8 +60,7 @@ class OrderService
             ->cargoType()->associate($request->input('cargo_type'))
             ->vehicleType()->associate($request->input('vehicle_type'))
             ->cityFrom()->associate($request->input('city_from'))
-            ->cityTo()->associate($request->input('city_to'))
-            ->driver()->associate($request->input('driver'));
+            ->cityTo()->associate($request->input('city_to'));
         $order->update(['price' => $this->calculatePrice(
             $request->input('city_from'),
             $request->input('city_to'),
