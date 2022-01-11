@@ -1,3 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'style.css';
+@import 'bootstrap.min.css';
+@import 'ionicons.min.css';
+@import 'animate.css';
+@import 'aos.css';
+@import 'bootstrap-datepicker.css';
+@import 'flaticon.css';
+@import 'icomoon.css';
+@import 'magnific-popup.css';
