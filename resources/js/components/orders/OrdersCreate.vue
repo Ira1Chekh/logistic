@@ -94,6 +94,16 @@
                 </div>
             </div>
 
+<!--            <div>-->
+<!--                <label for="name" class="block text-sm font-medium text-gray-700">Документи</label>-->
+<!--                <div class="mt-1">-->
+<!--                    <input type="file" name="documents" id="documents" ref="file" @change="handleFileUpload" multiple-->
+<!--                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">-->
+<!--&lt;!&ndash;                           v-model="form.documents"&ndash;&gt;-->
+
+<!--                </div>-->
+<!--            </div>-->
+
         </div>
 
         <button type="submit"
@@ -105,7 +115,7 @@
 
 
 <script>
-import {onMounted, reactive} from 'vue'
+import {onMounted, reactive, ref} from 'vue'
 import useOrders from "../../composables/orders";
 
 export default {
@@ -120,7 +130,20 @@ export default {
             due_date: '',
             city_from: 0,
             city_to: 0,
+            documents: []
         })
+        // const file = ref(null)
+        // let docs = [];
+        //
+        // const handleFileUpload = async(event) => {
+        //     // debugger;
+        //     console.log("selected file", {'p':  event.target})
+        //     form.documents.push(...event.target.files);
+        //     console.log("selected file",form.documents)
+        //
+        //     // docs = file.value.files
+        //     //Upload to server
+        // }
 
         const { errors, storeOrder, cargoTypes, vehicleTypes, cities, getVehicleTypes, getCargoTypes, getCities } = useOrders()
 
@@ -138,7 +161,9 @@ export default {
             saveOrder,
             cargoTypes,
             vehicleTypes,
-            cities
+            cities,
+            // handleFileUpload,
+            file
         }
     }
 }
