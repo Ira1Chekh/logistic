@@ -96,12 +96,11 @@
 
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Документи</label>
-                <div class="mt-1">
-                    <input type="file" name="documents" id="documents" ref="file" @change="handleFileUpload" multiple
-                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-<!--                           v-model="form.documents"-->
-
-                </div>
+                <UploadImages @changed="handleImages"/>
+<!--                <upload-media-->
+<!--                    server="/api/upload"-->
+<!--                    error="@error('media'){{$message}}@enderror">-->
+<!--                </upload-media>-->
             </div>
 
         </div>
@@ -115,10 +114,18 @@
 
 
 <script>
-import {onMounted, reactive, ref} from 'vue'
+import {onMounted, reactive} from 'vue'
 import useOrders from "../../composables/orders";
+import {UploadMedia, UpdateMedia} from "@s1modev/media-upload";
+import UploadImages from "vue-upload-drop-images"
 
 export default {
+    components: {
+        UploadMedia,
+        UpdateMedia,
+        UploadImages
+    },
+
     setup() {
         const form = reactive({
             name: '',
@@ -132,18 +139,10 @@ export default {
             city_to: 0,
             documents: []
         })
-        // const file = ref(null)
-        // let docs = [];
-        //
-        // const handleFileUpload = async(event) => {
-        //     // debugger;
-        //     console.log("selected file", {'p':  event.target})
-        //     form.documents.push(...event.target.files);
-        //     console.log("selected file",form.documents)
-        //
-        //     // docs = file.value.files
-        //     //Upload to server
-        // }
+
+        const handleImages = async (files) => {
+            form.documents = Array.from(files)
+        }
 
         const { errors, storeOrder, cargoTypes, vehicleTypes, cities, getVehicleTypes, getCargoTypes, getCities } = useOrders()
 
@@ -156,14 +155,13 @@ export default {
         }
 
         return {
+            handleImages,
             form,
             errors,
             saveOrder,
             cargoTypes,
             vehicleTypes,
             cities,
-            handleFileUpload,
-            file
         }
     }
 }

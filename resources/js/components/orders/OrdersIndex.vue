@@ -2,7 +2,7 @@
     <div class="flex place-content-end mb-4">
         <template v-if="user.role === 'client'">
             <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-                <router-link :to="{ name: 'orders.create' }" class="text-sm font-medium">Створити заказ</router-link>
+                <router-link :to="{ name: 'orders.create' }" class="text-sm text-white font-medium">Створити заказ</router-link>
             </div>
         </template>
 
