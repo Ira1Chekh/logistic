@@ -94,15 +94,15 @@
                 </div>
             </div>
 
-<!--            <div>-->
-<!--                <label for="name" class="block text-sm font-medium text-gray-700">Документи</label>-->
-<!--                <div class="mt-1">-->
-<!--                    <input type="file" name="documents" id="documents" ref="file" @change="handleFileUpload" multiple-->
-<!--                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">-->
-<!--&lt;!&ndash;                           v-model="form.documents"&ndash;&gt;-->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Документи</label>
+                <div class="mt-1">
+                    <input type="file" name="documents" id="documents" ref="file" @change="handleFileUpload" multiple
+                           class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+<!--                           v-model="form.documents"-->
 
-<!--                </div>-->
-<!--            </div>-->
+                </div>
+            </div>
 
         </div>
 
@@ -162,7 +162,7 @@ export default {
             cargoTypes,
             vehicleTypes,
             cities,
-            // handleFileUpload,
+            handleFileUpload,
             file
         }
     }
