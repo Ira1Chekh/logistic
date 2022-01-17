@@ -1,7 +1,7 @@
 <template>
     <div class="flex place-content-end mb-4">
         <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-            <router-link :to="{ name: 'settings.create' }" class="text-sm font-medium">Редагувати</router-link>
+            <router-link :to="{ name: 'settings.create' }" class="text-md-start bg-indigo-50 font-medium">Редагувати</router-link>
         </div>
     </div>
 

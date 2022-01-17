@@ -10,8 +10,8 @@ return [
         UserRole::Manager => 'Менеджер'
     ],
     OrderStatus::class => [
-        OrderStatus::Request => 'Не розглянутий',
-        OrderStatus::Pending => 'На розгляді',
+        OrderStatus::Request => 'На розгляді',
+        OrderStatus::Pending => 'Схвалений',
         OrderStatus::Paid => 'Сплачений',
         OrderStatus::In_progress => 'В роботі',
         OrderStatus::Done => 'Зроблений',

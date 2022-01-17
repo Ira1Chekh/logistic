@@ -21,7 +21,7 @@ export default function useOrders() {
 
     const getOrder = async (id) => {
         let response = await axios.get(`/api/orders/${id}`)
-        order.value = response.data.order
+        order.value = response.data.data
     }
 
     const getCargoTypes = async () => {

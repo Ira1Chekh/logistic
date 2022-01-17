@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('orders') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                        <img width="35" src="{{asset('images/truck.png')}}" alt="truck logo">
                     </a>
                 </div>
 

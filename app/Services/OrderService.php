@@ -10,7 +10,6 @@ use App\Models\GeneralSettings;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Stripe\SetupIntent;
 
 class OrderService
 {
@@ -26,14 +25,11 @@ class OrderService
         );
     }
 
-    public function show(Order $order, User $user): array
+    public function show(Order $order, User $user): OrderResource
     {
-        return [
-            'order' => OrderResource::make(
+        return OrderResource::make(
                 $order->load('client', 'driver', 'cargoType', 'vehicleType', 'cityFrom', 'cityTo')
-            ),
-            'intent' => $user->isClient() && $order->isPending() ? $this->makeIntentToPurchase($user) : null,
-        ];
+            );
     }
 
     public function store(OrderStoreRequest $request): OrderResource
@@ -72,11 +68,6 @@ class OrderService
         )]);
 
         return OrderResource::make($order);
-    }
-
-    public function makeIntentToPurchase(User $user): SetupIntent
-    {
-        return $user->createSetupIntent();
     }
 
     public function getCityById(int $cityId): City

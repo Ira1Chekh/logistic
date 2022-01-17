@@ -15,7 +15,7 @@ use function Illuminate\Events\queueable;
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, HasDocuments, HasRole, HasChildren, Billable;
+    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, HasDocuments, HasRole, HasChildren;
 
     const PAGINATION = 10;
 
@@ -46,13 +46,6 @@ class User extends Authenticatable implements HasMedia
     ];
 
     protected $appends = ['full_name'];
-
-    protected static function booted()
-    {
-        static::updated(queueable(function ($customer) {
-            $customer->syncStripeCustomerDetails();
-        }));
-    }
 
     public function getFullNameAttribute(): string
     {

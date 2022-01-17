@@ -31,7 +31,7 @@ class OrderController extends Controller
         return $this->orderService->store($request);
     }
 
-    public function show(Order $order): array
+    public function show(Order $order): OrderResource
     {
         return $this->orderService->show($order, auth()->user());
     }

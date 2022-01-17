@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\StripeController;
 use App\Http\Controllers\Auth\RegisteredDriverController;
 use App\Http\Controllers\Auth\RegisteredManagerController;
 use App\Http\Controllers\HomeController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,9 +65,8 @@ Route::group(['middleware' => 'auth'], function() {
         return view('clients');
     })->name('clients');
 
-    Route::get('/billing-portal', function (Request $request) {
-        return $request->user()->redirectToBillingPortal();
-    });
+    Route::get('stripe', [StripeController::class, 'stripe']);
+    Route::post('stripe', [StripeController::class, 'stripePayment'])->name('stripe.payment');
 
     Route::view('/{any}', 'dashboard')
         ->where('any', '.*');

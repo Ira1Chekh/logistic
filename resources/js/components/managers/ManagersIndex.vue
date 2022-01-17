@@ -1,7 +1,7 @@
 <template>
     <div class="flex place-content-end mb-4">
         <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-            <router-link :to="{ name: 'invite.manager' }" class="text-sm font-medium">Запросити нового менеджера</router-link>
+            <router-link :to="{ name: 'invite.manager' }" class="text-md-start bg-indigo-50 font-medium">Запросити нового менеджера</router-link>
         </div>
     </div>
 
