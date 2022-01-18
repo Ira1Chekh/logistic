@@ -2,12 +2,12 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <img width="100" src="{{asset('images/truck.png')}}" alt="truck logo">
             </a>
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+            Забули свій пароль? Без проблем. Просто повідомте нам свою адресу електронної пошти, і ми надішлемо вам електронною поштою посилання для скидання пароля, за яким ви зможете вибрати новий.
         </div>
 
         <!-- Session Status -->
@@ -21,14 +21,14 @@
 
             <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" value="Електронна пошта" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 <x-button>
-                    {{ __('Email Password Reset Link') }}
+                    Посилання для скидання пароля електронною поштою
                 </x-button>
             </div>
         </form>

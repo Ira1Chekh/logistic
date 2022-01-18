@@ -17,7 +17,6 @@ class UserResource extends JsonResource
             'role' => $this->role,
             'role_name' => UserRole::getDescription($this->role),
             'email' => $this->email,
-            'documents' => DocumentResource::collection($this->whenLoaded('media')),
         ];
     }
 }

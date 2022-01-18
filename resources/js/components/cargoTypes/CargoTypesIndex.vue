@@ -1,7 +1,9 @@
 <template>
     <div class="flex place-content-end mb-4">
         <div class="px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">
-            <router-link :to="{ name: 'cargo-types.create' }" class="text-md-start bg-indigo-50 font-medium">Додати тип вантажу</router-link>
+            <router-link :to="{ name: 'cargo-types.create' }"
+                         class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150"
+            >Додати тип вантажу</router-link>
         </div>
     </div>
 

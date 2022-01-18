@@ -34,15 +34,16 @@ class OrderStatusWasChanged extends Notification implements ShouldQueue
             ->line($this->generateMessage())
             ->line('Переглянути свої замовлення можна за посиланням:')
             ->action('Замовлення', route('orders.view', [$this->order->id]))
-            ->line('Якщо у вас виникли питання, ви можете зв\'язатись з оператором чату на головній сторінці.')
+            ->line('Якщо у вас виникли питання, ви можете зв\'язатись зі службою підтримки електронною поштою, зазначеною в листі.')
             ->line('Дякуємо за використання платформи.')
-            ->salutation('З повагою, команда Logistics.');
+            ->salutation('З повагою, команда '.config('app.name').'.');
     }
 
     private function generateMessage()
     {
         return match($this->order->status->value) {
-            OrderStatus::Pending => 'Ваш заказ був ухвалений менеджером. До слпати: '.$this->order->price,
+            OrderStatus::Pending => 'Ваш заказ був ухвалений менеджером.
+            Перейдіть на сайт для завершення операції, до слпати: '.$this->order->price.' грн.',
             OrderStatus::Paid => 'Ваш заказ був успішно оплачений.',
             OrderStatus::In_progress => 'Ваш заказ прямує до місця призначення.',
             OrderStatus::Declined => 'Ваш заказ був відхилений менеджером.',

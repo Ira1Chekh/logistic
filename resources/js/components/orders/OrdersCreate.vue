@@ -94,15 +94,6 @@
                 </div>
             </div>
 
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Документи</label>
-                <UploadImages @changed="handleImages"/>
-<!--                <upload-media-->
-<!--                    server="/api/upload"-->
-<!--                    error="@error('media'){{$message}}@enderror">-->
-<!--                </upload-media>-->
-            </div>
-
         </div>
 
         <button type="submit"
@@ -116,16 +107,8 @@
 <script>
 import {onMounted, reactive} from 'vue'
 import useOrders from "../../composables/orders";
-import {UploadMedia, UpdateMedia} from "@s1modev/media-upload";
-import UploadImages from "vue-upload-drop-images"
 
 export default {
-    components: {
-        UploadMedia,
-        UpdateMedia,
-        UploadImages
-    },
-
     setup() {
         const form = reactive({
             name: '',
@@ -137,12 +120,7 @@ export default {
             due_date: '',
             city_from: 0,
             city_to: 0,
-            documents: []
         })
-
-        const handleImages = async (files) => {
-            form.documents = Array.from(files)
-        }
 
         const { errors, storeOrder, cargoTypes, vehicleTypes, cities, getVehicleTypes, getCargoTypes, getCities } = useOrders()
 
@@ -155,7 +133,6 @@ export default {
         }
 
         return {
-            handleImages,
             form,
             errors,
             saveOrder,

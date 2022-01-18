@@ -7,9 +7,9 @@ use App\Http\Controllers\Api\ClientController;
 use App\Http\Controllers\Api\DriverController;
 use App\Http\Controllers\Api\ManagerController;
 use App\Http\Controllers\Api\OrderController;
-use App\Http\Controllers\Api\OrderPaymentController;
 use App\Http\Controllers\Api\OrderStatusController;
 use App\Http\Controllers\Api\SettingsController;
+use App\Http\Controllers\Api\StripeController;
 use App\Http\Controllers\Api\VehicleTypeController;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::group(['middleware' => 'auth:sanctum'], function() {
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
     Route::get('user', function (Request $request) {
         return UserResource::make($request->user());
     });
@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
     Route::apiResource('orders', OrderController::class)->except('destroy');
     Route::put('orders/{order}/status', OrderStatusController::class)->name('orders.status.update');
     Route::put('orders/{order}/driver/{driver}', AssignDriverToOrder::class)->name('orders.drivers.update');
-    Route::post('orders/{order}/payment', OrderPaymentController::class)->name('orders.payment');
+    Route::post('orders/{order}/pay', [StripeController::class, 'store'])->name('orders.pay');
 
     Route::apiResource('cargo-types', CargoTypeController::class);
     Route::apiResource('vehicle-types', VehicleTypeController::class);

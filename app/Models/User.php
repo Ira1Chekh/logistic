@@ -3,19 +3,16 @@
 namespace App\Models;
 
 use App\Enums\UserRole;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Cashier\Billable;
 use Laravel\Sanctum\HasApiTokens;
 use Parental\HasChildren;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use function Illuminate\Events\queueable;
 
-class User extends Authenticatable implements HasMedia
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, HasDocuments, HasRole, HasChildren;
+    use HasApiTokens, HasFactory, Notifiable, HasRole, HasChildren;
 
     const PAGINATION = 10;
 

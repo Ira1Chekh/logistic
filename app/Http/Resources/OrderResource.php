@@ -25,7 +25,6 @@ class OrderResource extends JsonResource
             'vehicle_type' => VehicleTypeResource::make($this->whenLoaded('vehicleType')),
             'city_from' => CityResource::make($this->whenLoaded('cityFrom')),
             'city_to' => CityResource::make($this->whenLoaded('cityTo')),
-            'documents' => DocumentResource::collection($this->whenLoaded('media')),
         ];
     }
 }

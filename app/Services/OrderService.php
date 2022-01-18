@@ -34,7 +34,7 @@ class OrderService
 
     public function store(OrderStoreRequest $request): OrderResource
     {
-        $order = Order::make($request->except('documents'));
+        $order = Order::make($request->validated());
         $order->price = $this->calculatePrice(
             $request->input('city_from'),
             $request->input('city_to'),
@@ -46,10 +46,6 @@ class OrderService
             ->cityFrom()->associate($request->input('city_from'))
             ->cityTo()->associate($request->input('city_to'))
             ->save();
-
-        if ($request->exists('documents')) {
-            $order->addDocuments($request->get('documents'));
-        }
 
         return OrderResource::make($order);
     }

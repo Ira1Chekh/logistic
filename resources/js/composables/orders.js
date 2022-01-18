@@ -53,9 +53,7 @@ export default function useOrders() {
         errors.value = ''
         try {
             console.log(['store', data])
-            await axios.post('/api/orders', {data},
-                { headers: { 'Content-Type': 'multipart/form-data' } }
-            )
+            await axios.post('/api/orders', data)
             await router.push({ name: 'orders.index' })
         } catch (e) {
             if (e.response.status === 422) {

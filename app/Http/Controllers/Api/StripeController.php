@@ -2,40 +2,36 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Enums\OrderStatus;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StripeRequest;
+use App\Models\Order;
+use App\Notifications\OrderStatusWasChanged;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Session;
 use Stripe;
 
 class StripeController extends Controller
 {
-    /**
-     * success response method.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function stripe()
+    public function store(StripeRequest $request, Order $order): RedirectResponse
     {
-        return view('stripe');
-    }
+        try {
+            Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+            Stripe\Charge::create ([
+                "amount" => $order->price * 100,
+                "currency" => config('services.stripe.currency'),
+                "source" => $request->input('stripeToken'),
+                "description" => "Оплата замовлення ".$order->name." на сайті ".config('app.name')
+            ]);
+            $order->update(['status' => OrderStatus::Paid]);
+        } catch (\Exception $exception) {
+            Session::flash('error', 'Виникла помилка, перевірте введені дані й зв\'яжіться з менеджером.');
+        }
 
-    /**
-     * success response method.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function stripePayment(Request $request)
-    {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        Stripe\Charge::create ([
-            "amount" => 100 * 150,
-            "currency" => "inr",
-            "source" => $request->stripeToken,
-            "description" => "Making test payment."
-        ]);
+        $order->client->notify(new OrderStatusWasChanged($order));
 
-        Session::flash('success', 'Payment has been successfully processed.');
+        Session::flash('success', 'Платіж успішно оброблено.');
 
-        return back();
+        return redirect()->route('orders');
     }
 }

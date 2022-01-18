@@ -14,7 +14,7 @@ return [
         OrderStatus::Pending => 'Схвалений',
         OrderStatus::Paid => 'Сплачений',
         OrderStatus::In_progress => 'В роботі',
-        OrderStatus::Done => 'Зроблений',
+        OrderStatus::Done => 'Виконаний',
         OrderStatus::Declined => 'Відхилений'
     ]
 ];

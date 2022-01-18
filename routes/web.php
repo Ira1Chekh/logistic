@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\StripeController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\StripeController;
 use App\Http\Controllers\Auth\RegisteredDriverController;
 use App\Http\Controllers\Auth\RegisteredManagerController;
 use App\Http\Controllers\HomeController;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('orders');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
@@ -32,14 +33,12 @@ Route::group(['middleware' => 'signed'], function () {
     Route::post('register/driver', [RegisteredDriverController::class, 'store'])->name('register.driver.store');
 });
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth:sanctum', 'verified'], function() {
     Route::get('/orders', function () {
         return view('orders');
     })->name('orders');
 
-    Route::get('/orders/{order}', function () {
-        return view('order');
-    })->name('orders.view');
+    Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.view');
 
     Route::get('/cargo-types', function () {
         return view('cargo-types');
@@ -65,10 +64,9 @@ Route::group(['middleware' => 'auth'], function() {
         return view('clients');
     })->name('clients');
 
-    Route::get('stripe', [StripeController::class, 'stripe']);
-    Route::post('stripe', [StripeController::class, 'stripePayment'])->name('stripe.payment');
+    Route::get('orders/{order}/payment', [StripeController::class, 'show'])->name('orders.payment');
 
-    Route::view('/{any}', 'dashboard')
+    Route::view('/{any}', 'home')
         ->where('any', '.*');
 });
 

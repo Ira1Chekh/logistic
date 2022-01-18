@@ -98,7 +98,7 @@ return [
     'manager' => [
         'first_name' => env('MANAGER_FIRST_NAME', 'Им\'я'),
         'last_name' => env('MANAGER_LAST_NAME', 'Прізвище'),
-        'email' => env('MANAGER_MAIL', 'manager@gmail.com')
+        'email' => env('MANAGER_MAIL', 'manager@logistics.com')
     ],
 
     /*

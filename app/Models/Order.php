@@ -11,9 +11,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Order extends Model implements HasMedia
+class Order extends Model
 {
-    use InteractsWithMedia, HasDocuments, Prunable;
+    use Prunable;
 
     const PAGINATION = 10;
 

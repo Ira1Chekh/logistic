@@ -44,11 +44,16 @@
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                             <p>{{ Session::get('success') }}</p>
                         </div>
+                    @elseif (Session::has('error'))
+                        <div class="alert alert-danger text-center">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                            <p>{{ Session::get('error') }}</p>
+                        </div>
                     @endif
 
-                    <form role="form" action="{{ route('stripe.payment') }}" method="post" class="validation"
+                    <form role="form" action="{{ route('orders.pay', [$order->id]) }}" method="post" class="validation"
                           data-cc-on-file="false"
-                          data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
+                          data-stripe-publishable-key="{{ config('services.stripe.key') }}"
                           id="payment-form">
                         @csrf
 
@@ -93,7 +98,7 @@
 
                         <div class="row">
                             <div class="col-xs-12">
-                                <button class="btn btn-outline-dark btn-lg btn-block" type="submit">Оплатити зараз (100 грн)</button>
+                                <button class="btn btn-outline-dark btn-lg btn-block" type="submit">Оплатити замовлення ({{ $order->price  }} грн)</button>
                             </div>
                         </div>
 
