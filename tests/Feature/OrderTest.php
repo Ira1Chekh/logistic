@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\CargoType;
 use App\Models\City;
 use App\Models\Client;
+use App\Models\Order;
 use App\Models\User;
 use App\Models\VehicleType;
 use Database\Seeders\DatabaseSeeder;
@@ -41,9 +42,32 @@ class OrderTest extends TestCase
     public function test_order_can_be_stored()
     {
         $data = $this->getOrderData();
+        $this->post(route('orders.store'), $data)->assertStatus(201);
+        $this->assertDatabaseHas('orders',
+            $this->getDatabaseOrderData($data, ['cargo_type', 'vehicle_type', 'city_from', 'city_to'])
+        );
+    }
 
-        $this->post('/api/orders', $data)->assertStatus(201);
-        $this->assertDatabaseHas('orders', $data);
+    public function test_order_can_be_updated()
+    {
+        $order = Order::factory()->create();
+        $data = $this->getOrderData();
+        $this->put(route('orders.update', [$order->id]), $data)->assertStatus(200);
+        $this->assertDatabaseHas('orders',
+            $this->getDatabaseOrderData($data, ['cargo_type', 'vehicle_type', 'city_from', 'city_to'])
+        );
+    }
+
+    protected function getDatabaseOrderData(array $data, array $keys): array
+    {
+        foreach ($data as $key => $value) {
+            if (in_array($key, $keys)) {
+                $data[$key.'_id'] = $value;
+                unset($data[$key]);
+            }
+        }
+
+        return $data;
     }
 
     protected function getOrderData(): array

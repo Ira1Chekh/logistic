@@ -4,16 +4,15 @@ namespace App\Models;
 
 use App\Enums\OrderStatus;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Prunable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Builder;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Order extends Model
 {
-    use Prunable;
+    use Prunable, HasFactory;
 
     const PAGINATION = 10;
 
