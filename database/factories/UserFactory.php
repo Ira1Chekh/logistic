@@ -35,4 +35,22 @@ class UserFactory extends Factory
             ];
         });
     }
+
+    public function client()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => UserRole::Client(),
+            ];
+        });
+    }
+
+    public function driver()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => UserRole::Driver(),
+            ];
+        });
+    }
 }

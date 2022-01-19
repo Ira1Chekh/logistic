@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\OrderStoreRequest;
-use App\Http\Requests\OrderUpdateRequest;
+use App\Http\Requests\OrderRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use App\Services\OrderService;
@@ -26,7 +25,7 @@ class OrderController extends Controller
         return $this->orderService->index($request->user());
     }
 
-    public function store(OrderStoreRequest $request): OrderResource
+    public function store(OrderRequest $request): OrderResource
     {
         return $this->orderService->store($request);
     }
@@ -36,7 +35,7 @@ class OrderController extends Controller
         return $this->orderService->show($order, auth()->user());
     }
 
-    public function update(OrderUpdateRequest $request, Order $order): OrderResource
+    public function update(OrderRequest $request, Order $order): OrderResource
     {
         return $this->orderService->update($request, $order);
     }

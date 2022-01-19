@@ -4,6 +4,7 @@ namespace Tests\Feature\Auth;
 
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Laravel\Jetstream\Jetstream;
 use Tests\TestCase;
 
 class RegistrationTest extends TestCase
@@ -20,11 +21,13 @@ class RegistrationTest extends TestCase
     public function test_new_users_can_register()
     {
         $response = $this->post('/register', [
-            'name' => 'Test User',
+            'first_name' => 'Test',
+            'last_name' => 'Test',
             'email' => 'test@example.com',
             'password' => 'password',
+            'role' => 'client',
             'password_confirmation' => 'password',
-        ]);
+        ])->assertStatus(302);
 
         $this->assertAuthenticated();
         $response->assertRedirect(RouteServiceProvider::HOME);
