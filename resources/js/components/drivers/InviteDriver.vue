@@ -25,9 +25,11 @@
 <script>
 import { reactive } from 'vue'
 import useDrivers from "../../composables/drivers";
+import { useRouter } from 'vue-router'
 
 export default {
     setup() {
+        const router = useRouter()
         const form = reactive({
             email: '',
         })
@@ -36,6 +38,7 @@ export default {
 
         const processDriver = async () => {
             await inviteDriver({ ...form })
+            await router.push({ name: 'drivers.index' })
         }
 
         return {

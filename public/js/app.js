@@ -25113,6 +25113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _composables_drivers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../composables/drivers */ "./resources/js/composables/drivers.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -25127,8 +25128,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   setup: function setup() {
+    var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     var form = (0,vue__WEBPACK_IMPORTED_MODULE_1__.reactive)({
       email: ''
     });
@@ -25147,6 +25150,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return inviteDriver(_objectSpread({}, form));
 
               case 2:
+                _context.next = 4;
+                return router.push({
+                  name: 'drivers.index'
+                });
+
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -25184,6 +25193,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _composables_managers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../composables/managers */ "./resources/js/composables/managers.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -25198,8 +25208,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   setup: function setup() {
+    var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     var form = (0,vue__WEBPACK_IMPORTED_MODULE_1__.reactive)({
       email: ''
     });
@@ -25218,6 +25230,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return inviteManager(_objectSpread({}, form));
 
               case 2:
+                _context.next = 4;
+                return router.push({
+                  name: 'managers.index'
+                });
+
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -28118,7 +28136,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
-/* harmony import */ var _components_cargoTypes_CargoTypesIndex_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/cargoTypes/CargoTypesIndex.vue */ "./resources/js/components/cargoTypes/CargoTypesIndex.vue");
+/* harmony import */ var _components_orders_OrdersIndex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/orders/OrdersIndex */ "./resources/js/components/orders/OrdersIndex.vue");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
@@ -28128,7 +28146,7 @@ __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js"
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   components: {
-    CargoTypesIndex: _components_cargoTypes_CargoTypesIndex_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    OrdersIndex: _components_orders_OrdersIndex__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 }).use(_router__WEBPACK_IMPORTED_MODULE_1__["default"]).mount('#app');
 

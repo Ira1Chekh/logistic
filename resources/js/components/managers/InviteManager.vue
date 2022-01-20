@@ -25,9 +25,11 @@
 <script>
 import { reactive } from 'vue'
 import useManagers from "../../composables/managers";
+import { useRouter } from 'vue-router'
 
 export default {
     setup() {
+        const router = useRouter()
         const form = reactive({
             email: '',
         })
@@ -36,6 +38,7 @@ export default {
 
         const processManager = async () => {
             await inviteManager({ ...form })
+            await router.push({ name: 'managers.index' })
         }
 
         return {
