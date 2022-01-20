@@ -1,17 +1,14 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Order;
 
 use App\Models\CargoType;
 use App\Models\City;
-use App\Models\Client;
 use App\Models\Order;
-use App\Models\User;
 use App\Models\VehicleType;
 use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
 class OrderTest extends TestCase
@@ -22,7 +19,6 @@ class OrderTest extends TestCase
     protected $seed = true;
     protected $seeder = DatabaseSeeder::class;
 
-    public $client;
     public CargoType $cargoType;
     public VehicleType $vehicleType;
     public City $cityFrom;
@@ -32,23 +28,20 @@ class OrderTest extends TestCase
     {
         parent::setUp();
         $this->setUpFaker();
-        $this->client = $this->signInAsClient();
         $this->cargoType = CargoType::first();
         $this->vehicleType = VehicleType::first();
         $this->cityFrom = City::first();
         $this->cityTo = City::find(2);
     }
 
-    public function test_order_can_be_stored()
+    protected function checkStatusUpdate(string $status)
     {
-        $data = $this->getOrderData();
-        $this->post(route('orders.store'), $data)->assertStatus(201);
-        $this->assertDatabaseHas('orders',
-            $this->getDatabaseOrderData($data, ['cargo_type', 'vehicle_type', 'city_from', 'city_to'])
-        );
+        $order = Order::factory()->create();
+        $this->put(route('orders.status.update', [$order->id]), ['status' => $status])->assertStatus(200);
+        $this->assertDatabaseHas('orders', ['id' => $order->id, 'status' => $status]);
     }
 
-    public function test_order_can_be_updated()
+    protected function checkUpdate()
     {
         $order = Order::factory()->create();
         $data = $this->getOrderData();
@@ -56,6 +49,18 @@ class OrderTest extends TestCase
         $this->assertDatabaseHas('orders',
             $this->getDatabaseOrderData($data, ['cargo_type', 'vehicle_type', 'city_from', 'city_to'])
         );
+    }
+
+    public function checkShow()
+    {
+        $order = Order::factory()->create();
+        $this->get(route('orders.show', [$order->id]))->assertStatus(200);
+    }
+
+    public function checkIndex()
+    {
+        Order::factory()->count(3)->create();
+        $this->get(route('orders.index'))->assertStatus(200);
     }
 
     protected function getDatabaseOrderData(array $data, array $keys): array
@@ -83,13 +88,5 @@ class OrderTest extends TestCase
             'city_from' => $this->cityFrom->id,
             'city_to' => $this->cityTo->id,
         ];
-    }
-
-    protected function signInAsClient()
-    {
-        $client = User::factory()->client()->create();
-        Sanctum::actingAs($client, ['*']);
-
-        return $client;
     }
 }

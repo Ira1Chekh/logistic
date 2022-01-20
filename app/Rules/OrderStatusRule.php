@@ -20,13 +20,13 @@ class OrderStatusRule implements Rule
 
     public function passes($attribute, $value)
     {
-        return ($this->user->isManager() && in_array($value, [OrderStatus::Pending(), OrderStatus::Declined()]))
-            || ($this->user->isClient() && $value === OrderStatus::Declined() && $this->order->isRequest())
-            || ($this->user->isDriver() && in_array($value, [OrderStatus::In_progress(), OrderStatus::Done()]));
+        return ($this->user->isManager() && in_array($value, [OrderStatus::Pending, OrderStatus::Declined]))
+            || ($this->user->isClient() && $value === OrderStatus::Declined && $this->order->isRequest())
+            || ($this->user->isDriver() && in_array($value, [OrderStatus::In_progress, OrderStatus::Done]));
     }
 
     public function message()
     {
-        return 'Нет доступа к смене статуса заказа.';
+        return 'Немає доступу до зміни статусу замовлення.';
     }
 }

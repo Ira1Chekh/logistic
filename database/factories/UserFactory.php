@@ -36,6 +36,15 @@ class UserFactory extends Factory
         });
     }
 
+    public function manager()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => UserRole::Manager(),
+            ];
+        });
+    }
+
     public function client()
     {
         return $this->state(function (array $attributes) {
