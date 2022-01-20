@@ -14,8 +14,6 @@ class Order extends Model
 {
     use Prunable, HasFactory;
 
-    const PAGINATION = 10;
-
     protected $fillable = [
         'name',
         'status',

@@ -21,7 +21,7 @@ class OrderService
                 ->filteredList($user)
                 ->with('cargoType', 'vehicleType', 'client', 'driver')
                 ->orderByDesc('id')
-                ->paginate(Order::PAGINATION)
+                ->get()
         );
     }
 
