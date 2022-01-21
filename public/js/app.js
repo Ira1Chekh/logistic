@@ -41180,7 +41180,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );
@@ -41246,7 +41246,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберегти ", -1
 /* HOISTED */
 );
@@ -41571,7 +41571,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Відправити ", -1
 /* HOISTED */
 );
@@ -41637,7 +41637,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Відправити ", -1
 /* HOISTED */
 );
@@ -41775,28 +41775,40 @@ var _hoisted_2 = {
   "class": "space-y-4 rounded-md shadow-sm"
 };
 var _hoisted_3 = {
-  "class": "block text-sm font-medium text-gray-700"
+  "class": "mt-2"
 };
 var _hoisted_4 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_5 = {
-  "class": "block text-sm font-medium text-gray-700"
+  "class": "mt-2"
 };
 var _hoisted_6 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_7 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_8 = {
+  "class": "block text-sm font-medium text-gray-700"
+};
+var _hoisted_9 = {
+  "class": "mt-2"
+};
+var _hoisted_10 = {
+  "class": "block text-sm font-medium text-gray-700"
+};
+var _hoisted_11 = {
+  "class": "mt-1"
+};
+var _hoisted_12 = {
   "class": "form-group"
 };
-var _hoisted_9 = ["value"];
+var _hoisted_13 = ["value"];
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );
@@ -41809,15 +41821,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.saveOrder && $setup.saveOrder.apply($setup, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_3, "Назва: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.name), 1
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_4, "Назва: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_4, "Маршрут: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name) + " - " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_6, "Маршрут: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name) + " - " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_5, "Період: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.start_date) + " - " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.due_date), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_8, "Період: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.start_date_label) + " - " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.due_date_label), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_6, "Водій: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.driver ? $setup.order.driver.full_name : '---'), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_10, "Водій: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.driver ? $setup.order.driver.full_name : '---'), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $setup.form.driver = $event;
@@ -41827,12 +41839,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.full_name), 9
     /* TEXT, PROPS */
-    , _hoisted_9);
+    , _hoisted_13);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.driver]])])])])]), _hoisted_10], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.driver]])])])])]), _hoisted_14], 32
   /* HYDRATE_EVENTS */
   )], 64
   /* STABLE_FRAGMENT */
@@ -41873,66 +41885,75 @@ var _hoisted_6 = {
   "class": "space-y-4 rounded-md shadow-sm"
 };
 var _hoisted_7 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_8 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_9 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_10 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_11 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_12 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_13 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_14 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_15 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_16 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_17 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_18 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_19 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_20 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_21 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_22 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_23 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_24 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_25 = {
-  "class": "block text-sm font-medium text-gray-700"
+  "class": "mt-2"
 };
 var _hoisted_26 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_27 = {
+  "class": "mt-2"
+};
+var _hoisted_28 = {
+  "class": "block text-sm font-medium text-gray-700"
+};
+var _hoisted_29 = {
+  "class": "mt-2"
+};
+var _hoisted_30 = {
   "class": "block text-sm font-medium text-gray-700"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -42016,13 +42037,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_22, "Тип кузова: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.vehicle_type.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_24, "Дата відправлення: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.start_date), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_24, "Дата відправлення: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.start_date_label), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_25, "Дата отримання: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.due_date), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_26, "Дата отримання: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.due_date_label), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_26, "Місто відправлення грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_28, "Місто відправлення грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_27, "Місто доставки грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_30, "Місто доставки грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 1
   /* TEXT */
   )])])])], 64
   /* STABLE_FRAGMENT */
@@ -42051,59 +42072,56 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "space-y-4 rounded-md shadow-sm"
 };
+var _hoisted_3 = {
+  "class": "mt-2"
+};
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Назва", -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "mt-1"
 };
+var _hoisted_6 = {
+  "class": "mt-2"
+};
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Опис", -1
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_8 = {
   "class": "mt-1"
 };
+var _hoisted_9 = {
+  "class": "mt-2"
+};
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Вага грузу", -1
 /* HOISTED */
 );
 
-var _hoisted_8 = {
-  "class": "mt-1"
-};
-
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "name",
-  "class": "block text-sm font-medium text-gray-700"
-}, "Тип груза", -1
-/* HOISTED */
-);
-
-var _hoisted_10 = {
-  "class": "mt-1"
-};
 var _hoisted_11 = {
-  "class": "form-group"
+  "class": "mt-1"
 };
-var _hoisted_12 = ["value"];
+var _hoisted_12 = {
+  "class": "mt-2"
+};
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
-}, "Тип кузова", -1
+}, "Тип груза", -1
 /* HOISTED */
 );
 
@@ -42114,62 +42132,92 @@ var _hoisted_15 = {
   "class": "form-group"
 };
 var _hoisted_16 = ["value"];
+var _hoisted_17 = {
+  "class": "mt-2"
+};
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "name",
+  "class": "block text-sm font-medium text-gray-700"
+}, "Тип кузова", -1
+/* HOISTED */
+);
+
+var _hoisted_19 = {
+  "class": "mt-1"
+};
+var _hoisted_20 = {
+  "class": "form-group"
+};
+var _hoisted_21 = ["value"];
+var _hoisted_22 = {
+  "class": "mt-2"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Дата відправлення", -1
 /* HOISTED */
 );
 
-var _hoisted_18 = {
+var _hoisted_24 = {
   "class": "mt-1"
 };
+var _hoisted_25 = {
+  "class": "mt-2"
+};
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Дата отримання", -1
 /* HOISTED */
 );
 
-var _hoisted_20 = {
+var _hoisted_27 = {
   "class": "mt-1"
 };
+var _hoisted_28 = {
+  "class": "mt-2"
+};
 
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Місто відправлення грузу", -1
 /* HOISTED */
 );
 
-var _hoisted_22 = {
+var _hoisted_30 = {
   "class": "mt-1"
 };
-var _hoisted_23 = {
+var _hoisted_31 = {
   "class": "form-group"
 };
-var _hoisted_24 = ["value"];
+var _hoisted_32 = ["value"];
+var _hoisted_33 = {
+  "class": "mt-2"
+};
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Місто доставки грузу", -1
 /* HOISTED */
 );
 
-var _hoisted_26 = {
+var _hoisted_35 = {
   "class": "mt-1"
 };
-var _hoisted_27 = {
+var _hoisted_36 = {
   "class": "form-group"
 };
-var _hoisted_28 = ["value"];
+var _hoisted_37 = ["value"];
 
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );
@@ -42182,7 +42230,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[9] || (_cache[9] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.saveOrder && $setup.saveOrder.apply($setup, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     name: "name",
     id: "name",
@@ -42192,7 +42240,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     name: "description",
     id: "description",
@@ -42202,7 +42250,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.description]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.description]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "number",
     name: "cargo_weight",
     id: "cargo_weight",
@@ -42212,7 +42260,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.cargo_weight]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.cargo_weight]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $setup.form.cargo_type = $event;
@@ -42222,12 +42270,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_12);
+    , _hoisted_16);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.cargo_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.cargo_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $setup.form.vehicle_type = $event;
@@ -42237,12 +42285,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_16);
+    , _hoisted_21);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.vehicle_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.vehicle_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "date",
     name: "start_date",
     id: "start_date",
@@ -42252,7 +42300,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.start_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.start_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [_hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "date",
     name: "due_date",
     id: "due_date",
@@ -42262,7 +42310,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.due_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.due_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
       return $setup.form.city_from = $event;
@@ -42272,12 +42320,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_24);
+    , _hoisted_32);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.city_from]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.city_from]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
       return $setup.form.city_to = $event;
@@ -42287,12 +42335,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_28);
+    , _hoisted_37);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.city_to]])])])])]), _hoisted_29], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.city_to]])])])])]), _hoisted_38], 32
   /* HYDRATE_EVENTS */
   )], 64
   /* STABLE_FRAGMENT */
@@ -42321,125 +42369,161 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "space-y-4 rounded-md shadow-sm"
 };
+var _hoisted_3 = {
+  "class": "mt-2"
+};
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Назва", -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "mt-1"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
+  "class": "mt-2"
+};
+var _hoisted_7 = {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 };
+var _hoisted_8 = {
+  "class": "mt-2"
+};
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Опис", -1
 /* HOISTED */
 );
 
-var _hoisted_7 = {
+var _hoisted_10 = {
   "class": "mt-1"
 };
-var _hoisted_8 = {
-  "for": "name",
-  "class": "block text-sm font-medium text-gray-700"
-};
-var _hoisted_9 = {
-  "for": "name",
-  "class": "block text-sm font-medium text-gray-700"
-};
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "name",
-  "class": "block text-sm font-medium text-gray-700"
-}, "Вага грузу", -1
-/* HOISTED */
-);
-
 var _hoisted_11 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_12 = {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 };
 var _hoisted_13 = {
-  "class": "mt-1"
+  "class": "mt-2"
 };
 var _hoisted_14 = {
-  "class": "form-group"
-};
-var _hoisted_15 = ["value"];
-var _hoisted_16 = ["value"];
-var _hoisted_17 = {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 };
-var _hoisted_18 = {
+var _hoisted_15 = {
+  "class": "mt-2"
+};
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "name",
+  "class": "block text-sm font-medium text-gray-700"
+}, "Вага грузу", -1
+/* HOISTED */
+);
+
+var _hoisted_17 = {
   "class": "mt-1"
 };
+var _hoisted_18 = {
+  "class": "mt-2"
+};
 var _hoisted_19 = {
+  "for": "name",
+  "class": "block text-sm font-medium text-gray-700"
+};
+var _hoisted_20 = {
+  "class": "mt-1"
+};
+var _hoisted_21 = {
   "class": "form-group"
 };
-var _hoisted_20 = ["value"];
-var _hoisted_21 = ["value"];
+var _hoisted_22 = ["value"];
+var _hoisted_23 = ["value"];
+var _hoisted_24 = {
+  "class": "mt-2"
+};
+var _hoisted_25 = {
+  "for": "name",
+  "class": "block text-sm font-medium text-gray-700"
+};
+var _hoisted_26 = {
+  "class": "mt-1"
+};
+var _hoisted_27 = {
+  "class": "form-group"
+};
+var _hoisted_28 = ["value"];
+var _hoisted_29 = ["value"];
+var _hoisted_30 = {
+  "class": "mt-2"
+};
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Дата відправлення", -1
 /* HOISTED */
 );
 
-var _hoisted_23 = {
+var _hoisted_32 = {
   "class": "mt-1"
 };
+var _hoisted_33 = {
+  "class": "mt-2"
+};
 
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 }, "Дата отримання", -1
 /* HOISTED */
 );
 
-var _hoisted_25 = {
+var _hoisted_35 = {
   "class": "mt-1"
 };
-var _hoisted_26 = {
+var _hoisted_36 = {
+  "class": "mt-2"
+};
+var _hoisted_37 = {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 };
-var _hoisted_27 = {
+var _hoisted_38 = {
   "class": "mt-1"
 };
-var _hoisted_28 = {
+var _hoisted_39 = {
   "class": "form-group"
 };
-var _hoisted_29 = ["value"];
-var _hoisted_30 = ["value"];
-var _hoisted_31 = {
+var _hoisted_40 = ["value"];
+var _hoisted_41 = ["value"];
+var _hoisted_42 = {
+  "class": "mt-2"
+};
+var _hoisted_43 = {
   "for": "name",
   "class": "block text-sm font-medium text-gray-700"
 };
-var _hoisted_32 = {
+var _hoisted_44 = {
   "class": "mt-1"
 };
-var _hoisted_33 = {
+var _hoisted_45 = {
   "class": "form-group"
 };
-var _hoisted_34 = ["value"];
-var _hoisted_35 = ["value"];
+var _hoisted_46 = ["value"];
+var _hoisted_47 = ["value"];
 
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );
@@ -42452,7 +42536,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[9] || (_cache[9] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.saveOrder && $setup.saveOrder.apply($setup, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     name: "name",
     id: "name",
@@ -42462,9 +42546,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_5, "Статус: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.status_name), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_7, "Статус: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.status_name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     name: "description",
     id: "description",
@@ -42474,11 +42558,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.description]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_8, "Клієнт: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.client.full_name), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.description]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_12, "Клієнт: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.client.full_name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_9, "Водій: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.driver ? $setup.order.driver.full_name : '---'), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_14, "Водій: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.driver ? $setup.order.driver.full_name : '---'), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "number",
     name: "cargo_weight",
     id: "cargo_weight",
@@ -42488,9 +42572,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.cargo_weight]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_12, "Тип грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.cargo_type.name), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.cargo_weight]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_19, "Тип грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.cargo_type.name), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $setup.order.cargo_type = $event;
@@ -42499,19 +42583,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: $setup.order.cargo_type.id
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.cargo_type.name), 9
   /* TEXT, PROPS */
-  , _hoisted_15), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.cargoTypes, function (item) {
+  , _hoisted_22), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.cargoTypes, function (item) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_16);
+    , _hoisted_23);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.cargo_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_17, "Тип кузова: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.vehicle_type.name), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.cargo_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_25, "Тип кузова: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.vehicle_type.name), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $setup.order.vehicle_type = $event;
@@ -42520,17 +42604,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: $setup.order.vehicle_type.id
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.vehicle_type.name), 9
   /* TEXT, PROPS */
-  , _hoisted_20), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.vehicleTypes, function (item) {
+  , _hoisted_28), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.vehicleTypes, function (item) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_21);
+    , _hoisted_29);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.vehicle_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.vehicle_type]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "date",
     name: "start_date",
     id: "start_date",
@@ -42540,7 +42624,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.start_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.start_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "date",
     name: "due_date",
     id: "due_date",
@@ -42550,9 +42634,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.due_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_26, "Місто відправлення грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.order.due_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_37, "Місто відправлення грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
       return $setup.order.city_from = $event;
@@ -42561,19 +42645,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: $setup.order.city_from.id
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_from.name), 9
   /* TEXT, PROPS */
-  , _hoisted_29), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.cities, function (item) {
+  , _hoisted_40), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.cities, function (item) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_30);
+    , _hoisted_41);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.city_from]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_31, "Місто доставки грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.city_from]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_43, "Місто доставки грузу: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control",
     "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
       return $setup.order.city_to = $event;
@@ -42582,17 +42666,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: $setup.order.city_to.id
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.order.city_to.name), 9
   /* TEXT, PROPS */
-  , _hoisted_34), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.cities, function (item) {
+  , _hoisted_46), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.cities, function (item) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       value: item.id
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
     /* TEXT, PROPS */
-    , _hoisted_35);
+    , _hoisted_47);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.city_to]])])])])]), _hoisted_36], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.order.city_to]])])])])]), _hoisted_48], 32
   /* HYDRATE_EVENTS */
   )], 64
   /* STABLE_FRAGMENT */
@@ -42795,43 +42879,52 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "space-y-4 rounded-md shadow-sm"
 };
+var _hoisted_3 = {
+  "class": "mt-2"
+};
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "fuel_price",
   "class": "block text-sm font-medium text-gray-700"
 }, "Ціна топліва", -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "mt-1"
 };
+var _hoisted_6 = {
+  "class": "mt-2"
+};
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "tax_percent",
   "class": "block text-sm font-medium text-gray-700"
 }, "Податки, %", -1
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_8 = {
   "class": "mt-1"
 };
+var _hoisted_9 = {
+  "class": "mt-2"
+};
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "enterprise_percent",
   "class": "block text-sm font-medium text-gray-700"
 }, "Доля підприємства, %", -1
 /* HOISTED */
 );
 
-var _hoisted_8 = {
+var _hoisted_11 = {
   "class": "mt-1"
 };
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );
@@ -42844,7 +42937,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.saveSettings && $setup.saveSettings.apply($setup, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "number",
     name: "fuel_price",
     id: "fuel_price",
@@ -42854,7 +42947,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.settings.fuel_price]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.settings.fuel_price]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "number",
     name: "tax_percent",
     id: "tax_percent",
@@ -42864,7 +42957,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.settings.tax_percent]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.settings.tax_percent]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "number",
     name: "enterprise_percent",
     id: "enterprise_percent",
@@ -42874,7 +42967,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.settings.enterprise_percent]])])])]), _hoisted_9], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.settings.enterprise_percent]])])])]), _hoisted_12], 32
   /* HYDRATE_EVENTS */
   )], 64
   /* STABLE_FRAGMENT */
@@ -43007,7 +43100,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );
@@ -43073,7 +43166,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
-  "class": "inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
+  "class": "inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25"
 }, " Зберігти ", -1
 /* HOISTED */
 );

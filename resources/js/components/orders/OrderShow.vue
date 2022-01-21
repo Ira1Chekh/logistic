@@ -4,7 +4,9 @@
     </div>
     <div class="flex place-content-end mb-4">
 
-        <router-link v-if="user.role === 'manager' || (user.role === 'client' && order.status === 'pending')"
+        <router-link
+            v-if="(user.role === 'manager' && (item.status === 'request' || item.status === 'pending'))
+                                     || (user.role === 'client' && item.status === 'request')"
                      :to="{ name: 'orders.edit', params: { id: order.id } }"
                      class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
             Редагувати
@@ -21,7 +23,7 @@
                 class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
             Схвалити</button>
 
-        <button v-if="user.role === 'manager' || (user.role === 'client' && order.status === 'pending')"
+        <button v-if="user.role === 'manager' || (user.role === 'client' && order.status === 'request')"
                 @click="declinedOrder(order.id)"
                 class="mr-2 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
             Скасувати</button>
@@ -40,51 +42,51 @@
 
     <div class="space-y-6">
         <div class="space-y-4 rounded-md shadow-sm">
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Назва: {{ order.name }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Статус: {{ order.status_name }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Опис: {{ order.description }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Клієнт: {{ order.client.full_name }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Водій: {{ order.driver ? order.driver.full_name : '---' }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Вага грузу: {{ order.cargo_weight }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Тип грузу: {{ order.cargo_type.name }}</label>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Тип кузова: {{order.vehicle_type.name}}</label>
             </div>
 
-            <div class="mt-1">
-                <label class="block text-sm font-medium text-gray-700">Дата відправлення: {{ order.start_date }}</label>
+            <div class="mt-2">
+                <label class="block text-sm font-medium text-gray-700">Дата відправлення: {{ order.start_date_label }}</label>
             </div>
 
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Дата отримання: {{order.due_date}}</label>
+            <div class="mt-2">
+                <label class="block text-sm font-medium text-gray-700">Дата отримання: {{order.due_date_label}}</label>
             </div>
 
-            <div>
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Місто відправлення грузу: {{order.city_from.name}}</label>
             </div>
 
-            <div>
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Місто доставки грузу: {{order.city_to.name}}</label>
             </div>
 

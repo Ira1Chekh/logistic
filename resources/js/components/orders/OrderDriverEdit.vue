@@ -5,19 +5,19 @@
 
     <form class="space-y-6" v-on:submit.prevent="saveOrder">
         <div class="space-y-4 rounded-md shadow-sm">
-            <div>
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Назва: {{order.name}}</label>
             </div>
 
-            <div>
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Маршрут: {{order.city_from.name}} - {{order.city_to.name}}</label>
             </div>
 
-            <div>
-                <label class="block text-sm font-medium text-gray-700">Період: {{order.start_date}} - {{order.due_date}}</label>
+            <div class="mt-2">
+                <label class="block text-sm font-medium text-gray-700">Період: {{order.start_date_label}} - {{order.due_date_label}}</label>
             </div>
 
-            <div>
+            <div class="mt-2">
                 <label class="block text-sm font-medium text-gray-700">Водій: {{ order.driver ? order.driver.full_name : '---' }}</label>
                 <div class="mt-1">
                     <div class="form-group">
@@ -31,7 +31,7 @@
         </div>
 
         <button type="submit"
-                class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25">
+                class="inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25">
             Зберігти
         </button>
     </form>

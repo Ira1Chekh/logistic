@@ -5,7 +5,7 @@
 
     <form class="space-y-6" v-on:submit.prevent="saveSettings">
         <div class="space-y-4 rounded-md shadow-sm">
-            <div>
+            <div class="mt-2">
                 <label for="fuel_price" class="block text-sm font-medium text-gray-700">Ціна топліва</label>
                 <div class="mt-1">
                     <input type="number" name="fuel_price" id="fuel_price"
@@ -14,7 +14,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="mt-2">
                 <label for="tax_percent" class="block text-sm font-medium text-gray-700">Податки, %</label>
                 <div class="mt-1">
                     <input type="number" name="tax_percent" id="tax_percent"
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="mt-2">
                 <label for="enterprise_percent" class="block text-sm font-medium text-gray-700">Доля підприємства, %</label>
                 <div class="mt-1">
                     <input type="number" name="enterprise_percent" id="enterprise_percent"
@@ -34,7 +34,7 @@
         </div>
 
         <button type="submit"
-                class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25">
+                class="inline-flex items-center mt-4 px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-800 rounded-md border border-transparent ring-gray-300 transition duration-150 ease-in-out hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring disabled:opacity-25">
             Зберігти
         </button>
     </form>

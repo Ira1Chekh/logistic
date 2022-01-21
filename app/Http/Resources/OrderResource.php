@@ -19,6 +19,8 @@ class OrderResource extends JsonResource
             'price' => $this->price,
             'start_date' => $this->start_date->format('Y-m-d'),
             'due_date'  => $this->due_date->format('Y-m-d'),
+            'start_date_label' => $this->start_date->format('d.m.Y'),
+            'due_date_label'  => $this->due_date->format('d.m.Y'),
             'client' => UserResource::make($this->whenLoaded('client')),
             'driver' => UserResource::make($this->whenLoaded('driver')),
             'cargo_type' => CargoTypeResource::make($this->whenLoaded('cargoType')),
